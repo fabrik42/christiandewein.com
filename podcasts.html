@@ -1,0 +1,18 @@
+---
+layout: page
+title: Podcasts
+---
+
+<h1>Podcasts</h1>
+
+<ul class="list">
+  {% for podcast in site.data.podcasts %}
+  <li>
+    <div class="info">
+      {{ podcast.year }}
+      <a href="{{podcast.slides_url}}">{{podcast.title}}</a>
+      at <a href="{{podcast.occasion_url}}">{{podcast.occasion}}</a>
+    </div>
+  </li>
+  {% endfor %}
+</ul>

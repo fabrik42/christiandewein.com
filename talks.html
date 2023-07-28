@@ -1,0 +1,18 @@
+---
+layout: page
+title: Talks
+---
+
+<h1>Talks</h1>
+
+<ul class="list">
+  {% for talk in site.data.talks %}
+  <li>
+    <div class="info">
+      {{ talk.year }}
+      <a href="{{talk.slides_url}}">{{talk.title}}</a>
+      at <a href="{{talk.occasion_url}}">{{talk.occasion}}</a>
+    </div>
+  </li>
+  {% endfor %}
+</ul>
