@@ -1,111 +1,114 @@
 - year : 2020
   date: 2020-05-07
   title: Single File Ruby Programs (Video)
-  occasion: Ruby User Group Berlin
-  occasion_url: https://www.rug-b.de/topics/the-lost-art-of-single-file-ruby-programs-858
+  occassion: Ruby User Group Berlin
+  occassion_url: https://www.rug-b.de/topics/the-lost-art-of-single-file-ruby-programs-858
   slides_url: https://www.youtube.com/watch?v=-n-sdy0TOpc
+  is_favorite: true
 
 - year : 2020
   date: 2020-03-26
   title: Single File Ruby Programs
-  occasion: Frankfurt Ruby Meetup
-  occasion_url: https://www.meetup.com/de-DE/Frankfurt-Ruby-Meetup/events/269346828
+  occassion: Frankfurt Ruby Meetup
+  occassion_url: https://www.meetup.com/de-DE/Frankfurt-Ruby-Meetup/events/269346828
   slides_url: https://speakerdeck.com/fabrik42/single-file-ruby-programs
 
 - year : 2019
   date: 2019-04-10
   title: Phoenix LiveView
-  occasion: Elixir Meetup Rhein/Main
-  occasion_url: https://www.meetup.com/de-DE/Elixir-Meetup-Rhein-Main/events/259902189
+  occassion: Elixir Meetup Rhein/Main
+  occassion_url: https://www.meetup.com/de-DE/Elixir-Meetup-Rhein-Main/events/259902189
   slides_url: https://speakerdeck.com/fabrik42/phoenix-live-view
 
 - year : 2019
   date: 2019-01-14
   title: Mobility On Demand und der ÖPNV (German, Video)
-  occasion: Webmontag Frankfurt
-  occasion_url: https://wmfra.de/webmontag-frankfurt-96-mobility
+  occassion: Webmontag Frankfurt
+  occassion_url: https://wmfra.de/webmontag-frankfurt-96-mobility
   slides_url: https://www.youtube.com/watch?v=-l83llnwMIE
+  is_favorite: true
 
 - year : 2018
   date: 2018-11-15
   title: Rails API-only considerations
-  occasion: Frankfurt Ruby Meetup
-  occasion_url: https://www.meetup.com/de-DE/Frankfurt-Ruby-Meetup/events/256159202
+  occassion: Frankfurt Ruby Meetup
+  occassion_url: https://www.meetup.com/de-DE/Frankfurt-Ruby-Meetup/events/256159202
   slides_url: https://speakerdeck.com/fabrik42/rails-api-only-considerations
 
 - year : 2018
   date: 2018-10-11
   title: Org-Mode
-  occasion: ioki Lunchtalks
-  occasion_url: https://ioki.com
+  occassion: ioki Lunchtalks
+  occassion_url: https://ioki.com
   slides_url: https://speakerdeck.com/fabrik42/org-mode
 
 - year : 2018
   date: 2018-04-19
   title: Flocking Simulation with Phoenix Channels
-  occasion: Elixir Meetup Rhein/Main
-  occasion_url: https://www.meetup.com/de-DE/Elixir-Meetup-Rhein-Main/events/249386874/
+  occassion: Elixir Meetup Rhein/Main
+  occassion_url: https://www.meetup.com/de-DE/Elixir-Meetup-Rhein-Main/events/249386874/
   slides_url: https://speakerdeck.com/fabrik42/flocking-simulation-with-phoenix-channels
 
 - year : 2017
   date: 2017-10-14
   title: Cherry Documentation about Mechanicon (Video)
-  occasion: Mechanicon 2017
-  occasion_url: https://www.meetup.com/de-DE/Mechanical-Keyboard-Meetup-Rhein-Main/events/240842117/
+  occassion: Mechanicon 2017
+  occassion_url: https://www.meetup.com/de-DE/Mechanical-Keyboard-Meetup-Rhein-Main/events/240842117/
   slides_url: https://www.youtube.com/watch?v=fSwf62mqQ7Y
+  is_favorite: true
 
 - year : 2017
   date: 2017-01-24
   title: Cleaner, scalable views with object oriented components
-  occasion: Frankfurt Ruby Meetup
-  occasion_url: https://www.meetup.com/Frankfurt-Ruby-Meetup/events/235435141/
+  occassion: Frankfurt Ruby Meetup
+  occassion_url: https://www.meetup.com/Frankfurt-Ruby-Meetup/events/235435141/
   slides_url: https://speakerdeck.com/fabrik42/cleaner-scalable-views-with-object-oriented-components
 
 - year : 2016
   date: 2016-10-01
   title: Mechanicon Impressions by Mecha-Blog (Video)
-  occasion: Mechanicon 2016
-  occasion_url: https://www.meetup.com/de-DE/Mechanical-Keyboard-Meetup-Rhein-Main/events/233445797/
+  occassion: Mechanicon 2016
+  occassion_url: https://www.meetup.com/de-DE/Mechanical-Keyboard-Meetup-Rhein-Main/events/233445797/
   slides_url: https://www.youtube.com/watch?v=Om9puRhKMc8
 
 - year : 2016
   date: 2016-02-04
   title: Headless Browser Experiments
-  occasion: flinc Lunchtalks
-  occasion_url: https://twitter.com/fabrik42/status/693028052239040512
+  occassion: flinc Lunchtalks
+  occassion_url: https://twitter.com/fabrik42/status/693028052239040512
   slides_url: https://speakerdeck.com/fabrik42/headless-browser-experiments
 
 - year : 2016
   date: 2016-01-28
   title: Headless Browser Experiments
-  occasion: DarmstadtJS
-  occasion_url: https://www.meetup.com/DarmstadtJS/events/227267077/
+  occassion: DarmstadtJS
+  occassion_url: https://www.meetup.com/DarmstadtJS/events/227267077/
   slides_url: https://speakerdeck.com/fabrik42/headless-browser-experiments
 
 - year: 2015
   date: 2015-07-17
   title: Speed Dating the flinc Tech Stack
-  occasion: Coding Night Frankfurt
-  occasion_url: https://twitter.com/coding_night
+  occassion: Coding Night Frankfurt
+  occassion_url: https://twitter.com/coding_night
   slides_url: https://speakerdeck.com/fabrik42/coding-night-2015
 
 - year: 2012
   date: 2012-12-10
   title: Turn by Turn Navigation in the Browser
-  occasion: RheinMainJS
-  occasion_url: https://rheinmainjs.de/archive
+  occassion: RheinMainJS
+  occassion_url: https://rheinmainjs.de/archive
   slides_url: https://speakerdeck.com/fabrik42/turn-by-turn-navigation-in-the-browser
 
 - year: 2012
   date: 2012-06-22
   title: Introducing instantnavi.com
-  occasion: WhereCamp Berlin
-  occasion_url: http://summer2012whereberlin.tumblr.com/
+  occassion: WhereCamp Berlin
+  occassion_url: http://summer2012whereberlin.tumblr.com/
   slides_url: https://speakerdeck.com/fabrik42/introducing-instantnavicom
 
 - year: 2011
   date: 2011-10-29
   title: facebook is your CMS
-  occasion: Rails Camp Hamburg
-  occasion_url: https://twitter.com/railscamp_hh
+  occassion: Rails Camp Hamburg
+  occassion_url: https://twitter.com/railscamp_hh
   slides_url: http://www.slideshare.net/fabrik42/facebook-is-your-cms/

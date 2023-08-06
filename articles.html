@@ -2,14 +2,16 @@
 layout: page
 title: Articles
 ---
+<h1>Articles</h1>
 
-<h2>Articles</h2>
 <ul class="list">
   {% for article in site.data.articles %}
   <li>
-    {{article.year}}
     <a href="{{article.url}}">{{article.title}}</a>
-    via <a href="{{article.via_url}}">{{article.via}}</a>
+    <br />
+    <span class="text-muted">
+      via <a href="{{article.via_url}}">{{article.via}}</a>, {{article.year}}
+    </span>
   </li>
   {% endfor %}
 </ul>

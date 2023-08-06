@@ -8,6 +8,10 @@
     <meta name="keywords" content="christian, baeuerlein, bäuerlein, bauerlein, fabrik42">
     <meta name="google-site-verification" content="{{site.webmaster_verification}}">
     <link rel="stylesheet" href="/assets/css/styles.css">
+
+    <script type="module">
+     import hotwiredTurbo from 'https://cdn.skypack.dev/@hotwired/turbo';
+    </script>
   </head>
   <body>
     <nav class="navbar">
@@ -18,5 +22,12 @@
 
     {{ content }}
 
+    <div class="container-md">
+      <footer class="pt-5 my-5">
+        <p class="text-end">
+          <a class="text-muted" href="imprint">Imprint</a>
+        </p>
+      </footer>
+    </div>
   </body>
 </html>

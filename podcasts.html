@@ -8,11 +8,11 @@ title: Podcasts
 <ul class="list">
   {% for podcast in site.data.podcasts %}
   <li>
-    <div class="info">
-      {{ podcast.year }}
-      <a href="{{podcast.slides_url}}">{{podcast.title}}</a>
-      at <a href="{{podcast.occasion_url}}">{{podcast.occasion}}</a>
-    </div>
+    <a href="{{podcast.slides_url}}">{{podcast.title}}</a>
+    <br />
+    <span class="text-muted">
+      via <a href="{{podcast.occassion_url}}">{{podcast.occassion}}</a>, {{podcast.year}}
+    </span>
   </li>
   {% endfor %}
 </ul>

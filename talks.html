@@ -9,9 +9,12 @@ title: Talks
   {% for talk in site.data.talks %}
   <li>
     <div class="info">
-      {{ talk.year }}
       <a href="{{talk.slides_url}}">{{talk.title}}</a>
-      at <a href="{{talk.occasion_url}}">{{talk.occasion}}</a>
+      {% if talk.is_favorite %}⭐️{% endif %}
+      <br/>
+      <span class="text-muted">
+        at <a href="{{talk.occassion_url}}">{{talk.occassion}}</a>, {{ talk.year }}
+      </span>
     </div>
   </li>
   {% endfor %}
