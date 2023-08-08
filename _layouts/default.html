@@ -2,8 +2,11 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>{{page.title}}</title>
-    <meta name="description" content="{{site.description}}">
+    {% if page.title %}
+    <title>{{page.title}} by {{site.title}}</title>
+    {% else %}
+    <title>{{site.title}}</title>
+    {% endif %}
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="keywords" content="christian, baeuerlein, bäuerlein, bauerlein, fabrik42">
     <meta name="google-site-verification" content="{{site.webmaster_verification}}">
@@ -12,6 +15,7 @@
     <script type="module">
      import hotwiredTurbo from 'https://cdn.skypack.dev/@hotwired/turbo';
     </script>
+    {% seo title=false %}
   </head>
   <body>
     <nav class="navbar">

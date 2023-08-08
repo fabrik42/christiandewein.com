@@ -1,5 +1,6 @@
 ---
 title:  "The ultimate Ultimate Hacking Keyboard Review"
+description: A thorough review of the Ultimate Hacking keyboard and its customization options.
 date: 2019-11-17
 layout: post
 permalink: /ultimate-hacking-keyboard-review
