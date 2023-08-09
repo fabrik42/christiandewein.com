@@ -1,6 +1,6 @@
 <figure class="article-image">
   <a href="{{ include.url }}" title="{{ include.description }}" target="_blank">
-    <img src="{{ include.url | replace_first: '.jpg', '_w800.jpg' | replace_first: '.png', '_w800.png' }}" alt="{{ include.description }}">
+    <img src="{{ include.url | replace_first: '.jpg', '_w800.jpg' | replace_first: '.png', '_w800.png' }}" class="img-fluid" alt="{{ include.description }}">
   </a>
   <figcaption>{{ include.description }}</figcaption>
 </figure>
