@@ -3,6 +3,7 @@ title:  "The ultimate Ultimate Hacking Keyboard Review"
 description: A thorough review of the Ultimate Hacking keyboard and its customization options.
 layout: post
 permalink: /ultimate-hacking-keyboard-review
+image: /assets/uhk-review/desk_0373.jpg
 ---
 
 # {{ page.title }}
@@ -212,6 +213,6 @@ So if you are into ergonomics, if you want to discover the world of split keyboa
 
 ---
 
-*This article was first published {{page.date}}*
+This article was first published {{page.date}}.
 
-Thank you for reading my article! If you spotted a mistake or you want to provide some feedback, [please get in touch with me](https://www.christianbaeuerlein.com).
+Thank you for reading my article! If you spotted a mistake or you want to provide some feedback, [please get in touch with me](https://christianbaeuerlein.com).
