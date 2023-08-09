@@ -1,13 +1,13 @@
 @import "./bootstrap_custom";
 
 .nav .nav-link {
-    color: inherit;
+  color: inherit;
 
-    &.active, &:hover {
-      text-decoration: underline;
-      text-decoration-thickness: 2px;
-      text-underline-offset: .2ex;
-    }
+  &.active, &:hover {
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-underline-offset: .2ex;
+  }
 }
 
 /// Common Layouts
