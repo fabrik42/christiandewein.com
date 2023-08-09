@@ -21,7 +21,7 @@ defaults:
       path: "" # an empty string here means all files in the project
     values:
       layout: "default"
-      image: "/assets/social-link-image_TODO.png"
+      image: "/assets/social-link-image.jpg"
 
 exclude:
   - README.org
@@ -36,8 +36,8 @@ google_site_verification: "ok3_egP8JYWNjujovfiEWeCPFMnI9c49PYcBlAREkr4"
 author:
   name: Christian Bäuerlein
   twitter: fabrik42
-  url: https://christianbaeuerlein.com/
-  picture: /assets/social-link-author_TODO.png
+  url: https://christianbaeuerlein.com
+  picture: /assets/social-link-author.jpg
 
 social:
   name: Christian Bäuerlein
