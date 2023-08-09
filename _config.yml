@@ -10,8 +10,9 @@ description: >
 markdown: kramdown
 
 plugins:
-  - jekyll-seo-tag
+  - jekyll-feed
   - jekyll-last-modified-at
+  - jekyll-seo-tag
   - jekyll-sitemap
 
 defaults:
@@ -20,7 +21,7 @@ defaults:
       path: "" # an empty string here means all files in the project
     values:
       layout: "default"
-      image: "/assets/social-link-image.png"
+      image: "/assets/social-link-image_TODO.png"
 
 exclude:
   - README.org
@@ -28,7 +29,7 @@ exclude:
 
 # Social / SEO settings
 
-logo: "/assets/social-link-logo.png"
+logo: "/assets/social-link-logo.jpg"
 
 google_site_verification: "ok3_egP8JYWNjujovfiEWeCPFMnI9c49PYcBlAREkr4"
 
@@ -36,6 +37,7 @@ author:
   name: Christian Bäuerlein
   twitter: fabrik42
   url: https://christianbaeuerlein.com/
+  picture: /assets/social-link-author_TODO.png
 
 social:
   name: Christian Bäuerlein
