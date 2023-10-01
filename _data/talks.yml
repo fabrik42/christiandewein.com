@@ -29,6 +29,13 @@
       year : 2020
       date: 2020-03-26
 
+- year: 2023
+  date: 2023-02-09
+  title: Mastering Hyperlocal Route Optimization Techniques (Video)
+  occassion: NextBillion Webinars
+  occassion_url: https://nextbillion.ai/webinars/route-optimization-for-hyperlocal-deliveries
+  slides_url: https://www.youtube.com/watch?v=wZ0M9zOiXkg
+
 - year : 2019
   date: 2019-04-10
   title: Phoenix LiveView
