@@ -1,17 +1,33 @@
-- year : 2020
-  date: 2020-05-07
-  title: Single File Ruby Programs (Video)
-  occassion: Ruby User Group Berlin
-  occassion_url: https://www.rug-b.de/topics/the-lost-art-of-single-file-ruby-programs-858
-  slides_url: https://www.youtube.com/watch?v=-n-sdy0TOpc
-  is_favorite: true
-
-- year : 2020
-  date: 2020-03-26
+- year : 2023
   title: Single File Ruby Programs
-  occassion: Frankfurt Ruby Meetup
-  occassion_url: https://www.meetup.com/de-DE/Frankfurt-Ruby-Meetup/events/269346828
-  slides_url: https://speakerdeck.com/fabrik42/single-file-ruby-programs
+  url: https://github.com/fabrik42/single-file-ruby-programs
+  is_favorite: true
+  nested: true
+  occassions:
+    - name: Euruko 2023 at Expo Stage
+      url: https://2023.euruko.org/
+      slides_title: Slides
+      slides_url: https://github.com/fabrik42/single-file-ruby-programs/blob/main/keynote_slides_2023/presentation_euruko.pdf
+      year : 2023
+      date: 2023-09-21
+    - name: Ruby Unconf Hamburg
+      url: https://2023.rubyunconf.eu/
+      slides_title: Slides
+      slides_url: https://github.com/fabrik42/single-file-ruby-programs/blob/main/keynote_slides_2023/presentation_rubyunconf.pdf
+      year : 2023
+      date: 2023-06-10
+    - name: Ruby User Group Berlin
+      url: https://www.rug-b.de/topics/the-lost-art-of-single-file-ruby-programs-858
+      slides_title: Video
+      slides_url: https://www.youtube.com/watch?v=-n-sdy0TOpc
+      year : 2020
+      date: 2020-05-07
+    - name: Frankfurt Ruby Meetup
+      url: https://www.meetup.com/de-DE/Frankfurt-Ruby-Meetup/events/269346828
+      slides_title: Slides
+      slides_url: https://speakerdeck.com/fabrik42/single-file-ruby-programs
+      year : 2020
+      date: 2020-03-26
 
 - year : 2019
   date: 2019-04-10

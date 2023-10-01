@@ -9,6 +9,22 @@ description: Talks that I gave at different occassions.
 
 <ul class="list">
   {% for talk in site.data.talks %}
+  {% if talk.nested %}
+  <li>
+    <div class="info">
+      <a href="{{talk.url}}">{{talk.title}}</a>
+      {% if talk.is_favorite %}⭐️{% endif %}
+      <br/>
+      <span class="text-muted">
+        {% for occassion in talk.occassions %}
+        <span class="text-muted">
+          at <a href="{{occassion.url}}">{{occassion.name}}</a> (<a href="{{occassion.slides_url}}">{{occassion.slides_title}}</a>), {{ occassion.year }}
+        </span><br/>
+        {% endfor %}
+      </span>
+    </div>
+  </li>
+  {% else %}
   <li>
     <div class="info">
       <a href="{{talk.slides_url}}">{{talk.title}}</a>
@@ -19,5 +35,6 @@ description: Talks that I gave at different occassions.
       </span>
     </div>
   </li>
+  {% endif %}
   {% endfor %}
 </ul>
