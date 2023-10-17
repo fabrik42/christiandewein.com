@@ -4,7 +4,7 @@
 
 - name: Lectures at THWS
   description: I am a lecturer at the THWS, talking about agile software development
-  url: https://emacs.christianbaeuerlein.com
+  url: https://fiw.thws.de/
 
 - name: My Emacs configuration
   description: Literal programming producing my config files
