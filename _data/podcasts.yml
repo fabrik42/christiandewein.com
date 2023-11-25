@@ -1,4 +1,11 @@
 - year : 2023
+  date: 2023-11-10
+  title: "Emacs"
+  occassion: FOCUS ON: Linux
+  occassion_url: https://focusonlinux.podigee.io/
+  slides_url: https://focusonlinux.podigee.io/70-emacs
+
+- year : 2023
   date: 2023-02-06
   title: "Das war die Mechanicon (German)"
   occassion: Click! Clack! Hack! Podcast
