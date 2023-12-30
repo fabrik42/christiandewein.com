@@ -1,0 +1,11 @@
+#+BEGIN_EXPORT html
+---
+title:  {%NAME%}
+description: TODO - new post
+layout: post
+permalink: /{%NAME%}
+image: TODO
+---
+#+END_EXPORT
+
+* {{ page.title }}

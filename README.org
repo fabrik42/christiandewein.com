@@ -1,12 +1,297 @@
-* Deployment
-#+begin_src sh
+#+TITLE: christianbaeuerlein.com
+#+PROPERTY: header-args+ :comments both
+#+PROPERTY: header-args+ :mkdirp yes
+#+PROPERTY: header-args+ :tangle "/Users/fabrik42/.spacemacs.d/config/cbcom-config.el"
+
+This is the repository of my personal website: christianbaeuerlein.com
+
+The website is built by the static site generator [[https://jekyllrb.com/][Jekyll]]. However, this Readme also provides glue code that is used to integrate the editing experience of the website into my Emacs/Spacemacs setup.
+
+* Spacemacs Integration
+Require dependencies, necessary to setup the customizations.
+
+#+BEGIN_SRC emacs-lisp
+(require 'ox-publish)
+#+END_SRC
+
+This variables point to different paths of the project that are used throughout the scripts defined here.
+
+#+BEGIN_SRC emacs-lisp
+(defvar cbcom-base-path "/Users/fabrik42/dev/ruby/christianbaeuerlein_com"
+  "Path to the base directory of the website.")
+
+(defvar cbcom-org-path (concat cbcom-base-path "/_org")
+  "Path to the directory that contains the source org files.")
+
+(defvar cbcom-posts-path (concat cbcom-org-path "/_posts")
+  "Path to the source files of the posts in the org-directory.")
+
+(defvar cbcom-template-path (concat cbcom-org-path "/_post_template.org")
+  "Path to the template file used to create new posts.")
+#+END_SRC
+** Org Publishing aka HTML Export
+Setup the publishing process for the =_org= directory. In this case, an HTML exporter and an exporter for static files (simple copy).
+
+#+BEGIN_SRC emacs-lisp
+(setq org-publish-project-alist `(
+  ("org-cbcom"
+    :base-directory ,cbcom-org-path
+    :base-extension "org"
+    :publishing-directory ,cbcom-base-path
+    :publishing-function org-html-publish-to-html
+    :html-extension "html"
+    :headline-levels 5
+    :html-toplevel-hlevel 1
+    :section-numbers nil
+    :with-toc nil
+    :with-sub-superscript nil
+    :body-only t
+    :exclude "_post_template.org"
+    :recursive t)
+  ("org-cbcom-static"
+    :base-directory ,cbcom-org-path
+    :base-extension "css\\|js\\|png\\|jpg\\|gif\\|pdf\\|mp3"
+    :publishing-directory ,cbcom-base-path
+    :publishing-function org-publish-attachment
+    :recursive t)
+  ("org" :components ("org-cbcom" "org-cbcom-static"))))
+#+END_SRC
+
+Now, we would be able to publish (aka export as HTML) the org files by calling =(org-publish "org-cbcom")= and =(org-publish "org-static-cbcom")= directly.
+
+But we want to autmate it. So we set up an =after-save-hook= that publishes all files, everytime an =.org= file in the website folder gets saved. Caching aka skipping of unchanged files is handled by the org publishing process automatically.
+
+#+BEGIN_SRC emacs-lisp
+(defun cbcom-publish-org-files ()
+  "Publish org files on save."
+  (when (and (string= (file-name-extension (buffer-file-name))
+                      "org")
+             (string-prefix-p cbcom-base-path
+                              (buffer-file-name)))
+    (org-publish "org-cbcom")))
+
+(add-hook 'after-save-hook 'cbcom-publish-org-files)
+#+END_SRC
+** Create a new Post
+Based on the template with the most important meta data structures, this function will create a new org-based post file.
+
+#+BEGIN_SRC emacs-lisp
+(defun cbcom-create-new-post ()
+  (interactive)
+  (let ((name (read-string "Enter title of new blog post: "))
+        (date (format-time-string "%Y-%m-%d-"))
+        (path cbcom-posts-path)
+        (template-path cbcom-template-path))
+    (let ((filename (concat path "/" date name ".org")))
+      (with-temp-buffer
+        (insert-file-contents template-path) ; Read the contents of the template file
+        (goto-char (point-min))
+        (while (search-forward "{%NAME%}" nil t) ; Replace all occurrences of {%NAME%}
+
+          (replace-match name t t))
+        (write-file filename))
+      (find-file filename))))
+
+#+END_SRC
+** Development Server
+Definition of variables that keeps track of the serve state.
+
+#+BEGIN_SRC emacs-lisp
+(defvar cbcom-build-status nil "Stores the status of the last Jekyll build.
+(defvar cbcom-jekyll-serve-process nil "Process object for Jekyll serve.")
+#+END_SRC
+
+Start and stop the =jekyll serve= process within emacs and log the output to a dedicated buffer.
+
+#+BEGIN_SRC emacs-lisp
+(defun cbcom-start-jekyll-serve ()
+  "Start Jekyll serve and output to a buffer."
+  (interactive)
+  (cd cbcom-base-path)
+  (let ((buffer (get-buffer-create "*jekyll-serve*")))
+    (setq cbcom-jekyll-serve-process (start-process "jekyll-serve" buffer "bundle" "exec" "jekyll" "serve"))
+    (display-buffer buffer)))
+
+(defun cbcom-stop-jekyll-serve ()
+  "Stop the Jekyll serve process."
+  (interactive)
+  (when (process-live-p cbcom-jekyll-serve-process)
+    (delete-process cbcom-jekyll-serve-process)
+    (setq cbcom-jekyll-serve-process nil)
+    (message "Jekyll serve stopped.")))
+#+END_SRC
+** Build Process
+Definition of variables that keeps track of the build state.
+
+#+BEGIN_SRC emacs-lisp
+(defvar cbcom-build-status nil "Stores the status of the last Jekyll build.
+   t for success, nil for failure.")
+#+END_SRC
+
+Call the =jekyll build= process within emacs and log the output to a dedicated buffer.
+
+#+BEGIN_SRC emacs-lisp
+(defun cbcom-build ()
+  "Run Jekyll build and output to a buffer.
+   Sets `cbcom-jekyll-build-status` based on the build success."
+  (interactive)
+  (cd cbcom-base-path)
+  (let ((exit-status (shell-command "bundle exec jekyll build"
+                                    "*jekyll-serve*")))
+    (setq cbcom-build-status (zerop exit-status))))
+#+END_SRC
+** Deployment
+Deploy the website using the =netflify cli= with emacs.
+
+#+BEGIN_SRC emacs-lisp
+(defun cbcom-deploy ()
+  "Run netlify deploy and log output to a buffer."
+  (interactive)
+  (cd cbcom-base-path)
+  (let ((exit-status (shell-command "netlify deploy --prod --dir ./_site"
+                                    "*jekyll-serve*")))))
+#+END_SRC
+** Status
+Right now, this is only used for modeline messages after calling options in the transient menu.
+
+One day, I hope to make this a permanent status in my [[https://github.com/TheBB/spaceline][modeline]].
+
+#+BEGIN_SRC emacs-lisp
+(defun cbcom-mode-line-status ()
+  "Returns a string to display in the mode-line the status of the Jekyll serve process and the last build."
+  (let ((serve-status (if (and (boundp 'cbcom-jekyll-serve-process)
+                               (process-live-p cbcom-jekyll-serve-process))
+                          "Serving"
+                        "Stopped"))
+        (build-status (if (boundp 'cbcom-build-status)
+                          (if cbcom-build-status "Build: Success" "Build: Fail")
+                        "Build: N/A")))
+    (format "Jekyll: [%s] [%s]" serve-status build-status)))
+#+END_SRC
+** Transient Menu
+[[https://magit.vc/manual/transient/][Transient]] is known as the library that powers the user interface of [[https://magit.vc][magit]].
+
+These functions define "suffixes", basically the functions that get called at the end of the selection process in the transient UI.
+
+Most of them are slim wrappers around functions defined above.
+
+#+BEGIN_SRC emacs-lisp
+(defun cbcom-suffix-start-jekyll ()
+  "Start jekyll serve"
+  (interactive)
+  (cbcom-start-jekyll-serve)
+  (message (cbcom-mode-line-status)))
+
+(defun cbcom-suffix-stop-jekyll ()
+  "Stop jekyll serve"
+  (interactive)
+  (cbcom-stop-jekyll-serve)
+  (message (cbcom-mode-line-status)))
+
+
+(defun cbcom-suffix-open-jekyll-log ()
+  "Open jekyll buffer"
+  (interactive)
+  (switch-to-buffer "*jekyll-serve*")
+  (message (cbcom-mode-line-status)))
+
+(defun cbcom-suffix-build ()
+  "Call jekyll build"
+  (interactive)
+  (cbcom-build)
+  (switch-to-buffer "*jekyll-serve*")
+  (message (cbcom-mode-line-status)))
+
+(defun cbcom-suffix-deploy ()
+  "Call deploy function"
+  (interactive)
+  (switch-to-buffer "*jekyll-serve*")
+  (cbcom-deploy))
+
+(defun cbcom-suffix-open-project ()
+  "Open the website Projectile project in a new perspective (spacemacs layout)"
+  (interactive)
+  ;; Ensure the path ends with a slash
+  (setq project-path (file-name-as-directory (expand-file-name cbcom-base-path)))
+  ;; Create or switch to a perspective named after the last directory in the path
+  (let ((project-name (file-name-nondirectory (directory-file-name project-path))))
+    (persp-switch project-name)
+    ;; Set the current project to the specified path
+    (projectile-add-known-project project-path)
+    ;; Switch to that project
+    (projectile-switch-project-by-name project-path)))
+
+(defun cbcom-suffix-browse-local ()
+  "Open local website in browser"
+  (interactive)
+  (browse-url "http://localhost:4000"))
+
+(defun cbcom-suffix-browse-deployed ()
+  "Open deployed website in browser"
+  (interactive)
+  (browse-url "https://christianbaeuerlein.com"))
+
+(defun cbcom-suffix-create-post ()
+  "Create a new file for a new post"
+  (interactive)
+  (cbcom-create-new-post))
+#+END_SRC
+
+Here the actual transient menu is defined that links to the previously defined suffixes.
+
+#+BEGIN_SRC emacs-lisp
+(transient-define-prefix cbcom-layout-descriptions
+  ()
+  "Prefix with descriptions specified with slots."
+  ["⭐️cb.com Command Center\n"
+   ["Development"
+    ("s" "Start jekyll serve" cbcom-suffix-start-jekyll)
+    ("S" "Stop jekyll serve" cbcom-suffix-stop-jekyll)
+    ("l" "Open log buffer" cbcom-suffix-open-jekyll-log
+     :transient t)]
+   ["Deployment"
+    ("B" "Build site" cbcom-suffix-build :transient t)
+    ("D" "Deploy site" cbcom-suffix-deploy)]
+   ["Files"
+    ("o" "Open project folder" cbcom-suffix-open-project)
+    ("b" "Open site in browser" cbcom-suffix-browse-local)
+    ("c" "Open deployed site in browser" cbcom-suffix-browse-deployed)]
+   ["Actions"
+    ("N" "New Blog Post" cbcom-suffix-create-post)]])
+#+END_SRC
+
+In the end, we hook up the menu to a dedicated shortcut.
+
+In our case, =SPC o b=.
+
+#+BEGIN_SRC emacs-lisp
+(defun cbcom-spacemacs-menu ()
+  (interactive)
+  (cbcom-layout-descriptions))
+
+(spacemacs/set-leader-keys "ob" 'cbcom-spacemacs-menu)
+#+END_SRC
+
+Final adjustments, so this file can be required in the Spacemacs config file.
+
+#+BEGIN_SRC emacs-lisp
+(provide 'cbcom-config)
+#+END_SRC
+* Manual Deployment
+** Build and deploy Jekyll site
+#+begin_src sh :tangle no
 bundle exec jekyll build
 netlify deploy --prod --dir ./_site
 #+end_src
-* Build notes
-** Creating thumbs for articles
-#+begin_src sh
+** Create thumbs for articles
+#+begin_src sh :tangle no
 cd ./assets/uhk-review
+rm *_w800.jpg
 convert "*.jpg" -resize 800x -set filename:area "%t_w800" %[filename:area].jpg
 convert "*.png" -resize 800x -set filename:area "%t_w800" %[filename:area].png
 #+end_src
+* Useful links
+- [[https://www.mfoot.com/blog/2015/11/17/using-org-mode-to-write-jekyll-blogs/][Using org-mode to blog with Jekyll]]
+- [[https://orgmode.org/manual/Publishing-options.html][Publishing options (The Org Manual)]]
+- [[https://orgmode.org/worg/dev/org-export-reference.html][Org Export Reference Documentation]]
+- [[https://github.com/positron-solutions/transient-showcase][positron-solutions/transient-showcase: Example forms for transient UI's in Emacs]]
