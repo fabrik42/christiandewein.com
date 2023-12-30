@@ -1,9 +1,8 @@
 #+BEGIN_EXPORT html
 ---
 name: Elixir Rhein/Main Meetup
-url: https://www.meetup.com/de-DE/Elixir-Meetup-Rhein-Main
 order: 5
 ---
 #+END_EXPORT
 
-Elixir Meetup for Frankfurt and the Rhein/Main area
+[[https://www.meetup.com/elixir-meetup-rhein-main/][Elixir Meetup]] for Frankfurt and the Rhein/Main area, a user group for all people working with and interested in the programming language Elixir.

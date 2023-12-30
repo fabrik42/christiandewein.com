@@ -1,8 +1,11 @@
 #+BEGIN_EXPORT html
 ---
 name: CNDY
-url: https://www.youtube.com/watch?v=fKPy9VRpWP8
 ---
 #+END_EXPORT
 
-A hyperlocal crypto asset ecosystem to buy candy!
+A hyperlocal crypto asset ecosystem to buy candy! The project was awarded with a honorable mention at Stellar Build Challenge #6.
+
+It was based on the Stellar blockchain and ecosystem and came with a server, a dashboard and clients for Android and iOS.
+
+You can [[https://www.youtube.com/watch?v=fKPy9VRpWP8][see it in action here]] with all code being [[https://github.com/cndy-store][open source]].

@@ -1,9 +1,8 @@
 #+BEGIN_EXPORT html
 ---
 name: My Emacs configuration
-url: https://emacs.christianbaeuerlein.com
 order: 3
 ---
 #+END_EXPORT
 
-Literal programming producing my config files
+Some people have a Zen garden, I have my [[https://emacs.christianbaeuerlein.com][Emacs configuration]].

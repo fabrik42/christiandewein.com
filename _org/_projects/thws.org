@@ -1,9 +1,8 @@
 #+BEGIN_EXPORT html
 ---
 name: Lectures at THWS
-url: https://fiw.thws.de/
 order: 2
 ---
 #+END_EXPORT
 
-I am a lecturer at the THWS, talking about agile software development
+I am a lecturer at the [[https://fiw.thws.de][THWS]], talking about agile software development from the management perspective to technical requirements and best practices.

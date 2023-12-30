@@ -1,8 +1,13 @@
 #+BEGIN_EXPORT html
 ---
 name: ffwdme.js
-url: https://ffwdmejs.org/
 ---
 #+END_EXPORT
 
-Interactive GPS driving directions for mobile browsers
+[[https://ffwdmejs.org/][ffwdme.js]] is a JavaScript toolkit that aims to bring interactive GPS driving directions to the mobile browser. It was first built and used on the iPhone 3G.
+
+It powered different novel navigation projects, for example instantnavi ([[https://www.youtube.com/watch?v=fJIx3l_ByYk][Video]]), a platform where users could create their own customized navigation systems via web UI.
+
+
+
+ffwdme.js is available as [[https://github.com/ffwdme/ffwdme.js][open source on GitHub]].
