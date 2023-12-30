@@ -1,0 +1,9 @@
+#+BEGIN_EXPORT html
+---
+name: Emacs FFM Meetup
+url: https://www.meetup.com/de-DE/emacs-ffm
+order: 5
+---
+#+END_EXPORT
+
+Emacs Meetup for Frankfurt and the Rhein/Main area

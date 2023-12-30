@@ -12,10 +12,10 @@ description: Different projects I likes to spend my time with.
   <a href="https://github.com/fabrik42">GitHub profile</a>.
 </p>
 
-{% for project in site.data.projects %}
+{% for project in site.projects %}
 <h2>{{ project.name }}</h2>
+{{project.content}}
 <p>
-  {{project.description}}
   <a href="{{project.url}}">{{project.name}}</a>
 </p>
 {% endfor %}

@@ -1,0 +1,9 @@
+#+BEGIN_EXPORT html
+---
+name: Mechanicon
+url: https://mechanicon.io
+order: 1
+---
+#+END_EXPORT
+
+Largest mechanical keyboard user meetup in Europe
