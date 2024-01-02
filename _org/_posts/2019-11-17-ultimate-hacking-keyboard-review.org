@@ -203,4 +203,4 @@ So if you are into ergonomics, if you want to discover the world of split keyboa
 
 This article was first published {{page.date | date_to_long_string: "ordinal", "US" }}.
 
-Thank you for reading my article! If you spotted a mistake or you want to provide some feedback, [[https://emacs.christianbaeuerlein.com][please get in touch with me]].
+Thank you for reading my article! If you spotted a mistake or you want to provide some feedback, [[https://christianbaeuerlein.com][please get in touch with me]].
