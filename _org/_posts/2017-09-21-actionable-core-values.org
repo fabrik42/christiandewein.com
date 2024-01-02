@@ -1,0 +1,109 @@
+#+BEGIN_EXPORT html
+---
+title: Actionable Core Values for your Engineering Team
+description: If you work in a team of developers, you should talk about your shared values as a team.
+layout: post
+permalink: /actionable-core-values-for-your-engineering-team
+---
+#+END_EXPORT
+
+* {{ page.title }}
+If you work in a team of developers, you should talk about your shared values as a team. In this article, I will explain why this makes sense, why you should take action on these values and how we did it in our team.
+
+This was an experiment for me. When I started it, I worked with some of my teammates professionally and full time together for over 7 years, with others for about 7 days. I knew we shared a lot of values back then, but we never actually worked them out. I wanted to change this.
+
+** Why should you define core values for your team?
+When you work together with other people in a team, and they care about what the team is doing and the team is somehow successful, you probably already share some unsaid values among the members of this team.
+
+I am lucky to work in such a very well performing and friendly team.
+
+Sometimes this is not the case and working with the team is frustrating. But even if the collaboration is inert or exhausting, there may be a good chance that you also share some values. They are just misinterpreted or not recognized.
+
+The point is: You will talk about values one way or the other. Everyone has personal values. They will come up at some point, in a discussion, an argument.
+
+The more stressful the situation is, the less likely it is that you will really understand each other. Perspectives and approaches differ and it takes some time to realize which values you share. It is much easier to really get each other when you put some time aside to specify upfront what’s important to you. It will also be easier to remember the values and live by them, once they are clarified and written out.
+
+For me, this is like the technical part of developing software. You can take your time now to think about how things should be and write some specs for it. Or you can wait until production is on fire. You will think about it one way or the other, but I am sure the former approach is much more efficient and pleasant.
+
+** Why should you tie actions to the core values?
+Sometimes these kind of “core-value-finding team offsites” are primarily a way to get to know the colleagues a little bit better and create some common ground. This is fine too, but I wanted to go further.
+
+I didn’t want us to define core values as an end in itself, but as a base for further actions to take our team to the next level. If you don’t live by a value, it’s not really a value to you. In order to live by these values, they must be actionable.
+
+So an additional task, beyond the definition of values, would be to put some thought into actions that bring these values to live. Which daily routines, tools, processes, behaviours or events can support a value?
+
+By reflecting about the values and how to make them actionable, we would have a much more intensive and detailed discussion about every proposed value.
+
+** Our Approach
+I looked for the best way to do this and found my answer in the book [[http://www.triballeadership.net/book][Tribal Leadership]]. It defines two terms:
+
+*Core Values* – What does the team stand for. The shared values of the team. A value can be defined by terms like [[https://www.threadsculture.com/core-values-examples][“Quality”, “Courage”, or “Trust”]].
+
+*Noble Cause* – What does the team live for. It is meant as a credo, a short description of what the team aspires to be. The book gives some very good examples. In other words, I would define it as the [[https://alessiobresciani.com/foresight-strategy/51-mission-statement-examples-from-the-worlds-best-companies/][mission statement]] of your team.
+
+It is important to understand the difference between both.
+
+The /*Core Values*/ are the foundation, the basecamp of which the team starts off right now. The /*Noble Cause*/ gives the team the right direction, reminds them of what they want to become.
+
+Therefore it is important to look out for actionable items. They should build upon the values and support the team to move in the right direction, towards the noble cause.
+
+Based on these ideas we did a one day offsite with the whole team. In the next section, I will describe what we did and how it went.
+** The Offsite Event
+This was the first time I organized this kind of event for my colleagues and I was very nervous. They were all very supportive of the idea, but I know that this kind of events can get a kind of cheesy vibe, which will result in eye-rolling and snarky comments and would basically undermine the whole idea. So one of my top priorities was to get my teammates into the mood to give it a serious and honest try.
+
+We took a whole day for this. We were eight people and met in a creative space outside of work, to not be distracted. I brought coffee and some soft drinks. We started slow.
+
+I wanted everyone to feel comfortable, because I think it was crucial to the success of this event that people were relaxed and open to the work we wanted to do.
+*** Story Time
+As a warm up, we sat down at a table for a face-to-face discussion. We would soon start to work a lot with Post-Its and flip charts, but I felt a more intimate, personal opener would set a better course for the rest of the day.
+
+I started to share one of my “developer war stories”, at the risk of boring the rest of the group. But the point of the story was that I could end with /“and this is when I realized X is a very important value for me in my working environment”/. The others could relate and I asked them to share some stories of themselves. In the end, everyone had shared a short story and a value the team could relate with.
+*** Collecting Ideas for Core Values
+We split up in two groups and spent some time collecting and discussing personal work-related values, writing them down on Post-its. This is important, because to discuss shared values, every member needs to have some basic understanding of their own personal values and the values of others.
+
+We came together, presented the results of the two sub-groups and I think everyone was surprised how much in common everyone had.
+
+Normally, one would assume that we would proceed to discuss the presented values, cluster the results, discard the less-important and so on. But we didn’t do that. Not yet.
+*** Collecting Ideas for the Noble Cause
+Instead, I introduced the concept of */Noble Cause/* and the difference between */Core Values/* and the */Noble Cause/*. We split up again and worked on ideas and suggestions for a noble cause.
+
+I think it was important to do it this way, because people should realize the difference /*and*/ the connection between these two terms. It was necessary to start working on the noble cause before finishing the values. Otherwise, topics of one concept always seem to creep into the other one.
+
+Only after this round of brainstorming and discussion, we came together to talk about the results of values and cause. I created a new git repo and we started clustering, sorting out, formulating the values and the cause in a markdown file on a projector.
+*** Defining Core Values and Noble Cause as a whole Group
+This was the most laborious, but also the most important part of the offsite. We tried to settle on a handful of terms that represent our values and to write some short explanation for every term. It forced us to discuss the actual meaning of the terms more in depth, clarifying what every term meant for the single team members. Interestingly, it was much easier to agree on the topics to leave out, than on the meaning of the topics everybody wanted to include.
+
+In the end, we agreed on five core values, each one explained by one to four short bullet points. And two very short sentences as our noble cause.
+
+The whole team was exhausted, but also happy with the result. Everyone could find themselves in the values and cause, but would agree that it was hard work to express these. Not because we argued all the time, but because it is hard to formulate the values and cause. You realize, even when you talked about these values implicitly for years, you never tried to boil it down, as a group effort, to make it clear to everyone. It is much harder than you would think, even after years of happily working together.
+*** Finding Actionable Items for the Core Values
+After a break, we spent the rest of the afternoon by splitting up in two groups again. We were collecting ideas for actionable items to support our way as a team, based on the core values, towards the noble cause.
+
+The idea was to find things in our workflow that would support our core values: Things that always existed, things that we should do more, or new things that would move us into the right direction.
+
+We presented and discussed the ideas and, most importantly, we appointed people to be responsible for actionable items they cared for.
+
+This is when this offsite ended. We were able talk about a lot of things for the present and the future of this team, but it was also clear that we needed to take care of the results to prevent them from vanishing.
+** One Month Later — The Aftermath
+I waited one month to write up this article, because I wanted to see if the results of this offsite would last. The offsite was not meant to change the life of every team member, but I really hoped it would have a positive, sustainable impact on the way we work.
+
+Here are some of the actionable items that we already took action on:
+
+- We created a Slack channel to discuss and remind ourselves of our core values and noble cause.
+- We printed the core values and noble cause on two large posters to hang it in our office.
+- We shared and explained the core values and noble cause to candidates and new team members during our hiring process and onboarding process.
+- We discussed concrete rules for better commit messages.
+- We settled some heated discussions by stopping for a second and reminding ourselves about our values.
+- We revived a company internal book club and read a book together.
+
+A lot of different ideas were created in this initial workshop. Sometimes the scope is very broad (book club), sometimes the scope is very specific (better commit messages). But they all pay into the same values, our values. I think it is great that we have such a wide variety of small enhancements coming from this.
+** So… What are our Core Values and Noble Cause?
+I am very proud of our core values and noble cause, so a part of me really wants to share them. But I won’t. This is something we did for us, that is important to us, and tailored for us.
+
+Maybe someday we will decide to publish them. For now, we will keep them hidden in our little dev tribe. We just want to see where this goes.
+
+-----
+
+This article was first published {{page.date | date_to_long_string: "ordinal", "US" }}.
+
+Thank you for reading my article! If you spotted a mistake or you want to provide some feedback, [[https://christianbaeuerlein.com][please get in touch with me]].
