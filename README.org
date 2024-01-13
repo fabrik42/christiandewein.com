@@ -91,122 +91,110 @@ Based on the template with the most important meta data structures, this functio
           (replace-match name t t))
         (write-file filename))
       (find-file filename))))
-
 #+END_SRC
-** Development Server
-Definition of variables that keeps track of the serve state.
+** Process and Task Management
+The management of the local dev processes and tasks is taken care of by [[https://github.com/rejeep/prodigy.el/tree/master][prodigy.el]] and its [[https://develop.spacemacs.org/layers/+tools/prodigy/README.html][Spacemacs layer]].
+
+I think usually Prodigy is meant to manage long-running services like a dev server. However, I also want to use is for the short-lived =jekyll build= command. This does not work perfectly, but I added an additional status to signal that the build task is done.
 
 #+BEGIN_SRC emacs-lisp
-(defvar cbcom-build-status nil "Stores the status of the last Jekyll build.
-(defvar cbcom-jekyll-serve-process nil "Process object for Jekyll serve.")
+(prodigy-define-status :id 'done
+  :face 'prodigy-green-face)
 #+END_SRC
 
-Start and stop the =jekyll serve= process within emacs and log the output to a dedicated buffer.
+Hint from the official Prodigy README to make Jekyll processes work.
 
 #+BEGIN_SRC emacs-lisp
-(defun cbcom-start-jekyll-serve ()
-  "Start Jekyll serve and output to a buffer."
-  (interactive)
-  (cd cbcom-base-path)
-  (let ((buffer (get-buffer-create "*jekyll-serve*")))
-    (setq cbcom-jekyll-serve-process (start-process "jekyll-serve" buffer "bundle" "exec" "jekyll" "serve"))
-    (display-buffer buffer)))
-
-(defun cbcom-stop-jekyll-serve ()
-  "Stop the Jekyll serve process."
-  (interactive)
-  (when (process-live-p cbcom-jekyll-serve-process)
-    (delete-process cbcom-jekyll-serve-process)
-    (setq cbcom-jekyll-serve-process nil)
-    (message "Jekyll serve stopped.")))
-#+END_SRC
-** Build Process
-Definition of variables that keeps track of the build state.
-
-#+BEGIN_SRC emacs-lisp
-(defvar cbcom-build-status nil "Stores the status of the last Jekyll build.
-   t for success, nil for failure.")
+(prodigy-define-tag :name 'jekyll
+  :env '(("LANG" "en_US.UTF-8")
+         ("LC_ALL" "en_US.UTF-8")))
 #+END_SRC
 
-Call the =jekyll build= process within emacs and log the output to a dedicated buffer.
+*** Development Server
+Start and stop the =jekyll serve= process within Prodigy/emacs and log the output to a dedicated buffer.
 
 #+BEGIN_SRC emacs-lisp
-(defun cbcom-build ()
-  "Run Jekyll build and output to a buffer.
-   Sets `cbcom-jekyll-build-status` based on the build success."
-  (interactive)
-  (cd cbcom-base-path)
-  (let ((exit-status (shell-command "bundle exec jekyll build"
-                                    "*jekyll-serve*")))
-    (setq cbcom-build-status (zerop exit-status))))
+(prodigy-define-service :name "cbcom Jekyll Server"
+  :command "bundle"
+  :args '("exec" "jekyll" "serve")
+  :url "http://localhost:4000"
+  :cwd "/Users/fabrik42/dev/ruby/christianbaeuerlein_com"
+  :tags '(cbcom jekyll)
+  :on-output (lambda (&rest args)
+    (let ((output (plist-get args :output))
+          (service (plist-get args :service)))
+      (when (s-matches? "Server running..." output)
+        (prodigy-set-status service 'ready))
+      (when (s-matches? "...done" output)
+        (prodigy-set-status service 'ready))
+      (when (s-matches? "error" output)
+        (prodigy-set-status service 'failed))
+      (when (s-matches? "exception" output)
+        (prodigy-set-status service 'failed)))))
 #+END_SRC
-** Deployment
-Deploy the website using the =netflify cli= with emacs.
+*** Build Process
+The Jekyll build task, defined as Prodigy service.
 
 #+BEGIN_SRC emacs-lisp
-(defun cbcom-deploy ()
-  "Run netlify deploy and log output to a buffer."
-  (interactive)
-  (cd cbcom-base-path)
-  (let ((exit-status (shell-command "netlify deploy --prod --dir ./_site"
-                                    "*jekyll-serve*")))))
+(prodigy-define-service :name "cbcom Jekyll Build"
+  :command "bundle"
+  :args '("exec" "jekyll" "build")
+  :cwd "/Users/fabrik42/dev/ruby/christianbaeuerlein_com"
+  :tags '(cbcom jekyll)
+  :on-output (lambda (&rest args)
+    (let ((output (plist-get args :output))
+          (service (plist-get args :service)))
+      (when (s-matches? "Configuration file" output)
+        (prodigy-set-status service 'ready))
+      (when (s-matches? "done in " output)
+        (prodigy-set-status service 'done))
+      (when (s-matches? "error" output)
+        (prodigy-set-status service 'failed))
+      (when (s-matches? "exception" output)
+        (prodigy-set-status service 'failed)))))
 #+END_SRC
-** Status
-Right now, this is only used for modeline messages after calling options in the transient menu.
+*** Deployment
+Deploy the website using the =netflify cli= with Prodigy/emacs.
 
-One day, I hope to make this a permanent status in my [[https://github.com/TheBB/spaceline][modeline]].
+TODO: change to production deploy!
 
 #+BEGIN_SRC emacs-lisp
-(defun cbcom-mode-line-status ()
-  "Returns a string to display in the mode-line the status of the Jekyll serve process and the last build."
-  (let ((serve-status (if (and (boundp 'cbcom-jekyll-serve-process)
-                               (process-live-p cbcom-jekyll-serve-process))
-                          "Serving"
-                        "Stopped"))
-        (build-status (if (boundp 'cbcom-build-status)
-                          (if cbcom-build-status "Build: Success" "Build: Fail")
-                        "Build: N/A")))
-    (format "Jekyll: [%s] [%s]" serve-status build-status)))
+(prodigy-define-service :name "cbcom Netflify Deploy"
+  :command "netlify"
+  :args '("deploy" "--dir" "./_site")
+  :cwd "/Users/fabrik42/dev/ruby/christianbaeuerlein_com"
+  :url "https://christianbaeuerlein.com"
+  :tags '(cbcom)
+  :on-output (lambda (&rest args)
+               (let ((output (plist-get args :output))
+                     (service (plist-get args :service)))
+                 (when (s-matches? "Deploy path:" output)
+                   (prodigy-set-status service 'ready))
+                 (when (s-matches? "Deploy is live!" output)
+                   (prodigy-set-status service 'done))
+                 (when (s-matches? "error" output)
+                   (prodigy-set-status service 'failed))
+                 (when (s-matches? "exception" output)
+                   (prodigy-set-status service 'failed)))))
 #+END_SRC
 ** Transient Menu
 [[https://magit.vc/manual/transient/][Transient]] is known as the library that powers the user interface of [[https://magit.vc][magit]].
 
 These functions define "suffixes", basically the functions that get called at the end of the selection process in the transient UI.
-
 Most of them are slim wrappers around functions defined above.
 
 #+BEGIN_SRC emacs-lisp
-(defun cbcom-suffix-start-jekyll ()
+(defun cbcom-suffix-open-prodigy ()
   "Start jekyll serve"
   (interactive)
-  (cbcom-start-jekyll-serve)
-  (message (cbcom-mode-line-status)))
-
-(defun cbcom-suffix-stop-jekyll ()
-  "Stop jekyll serve"
-  (interactive)
-  (cbcom-stop-jekyll-serve)
-  (message (cbcom-mode-line-status)))
-
+  (prodigy))
 
 (defun cbcom-suffix-open-jekyll-log ()
-  "Open jekyll buffer"
+  "Open jekyll serve buffer"
   (interactive)
-  (switch-to-buffer "*jekyll-serve*")
-  (message (cbcom-mode-line-status)))
-
-(defun cbcom-suffix-build ()
-  "Call jekyll build"
-  (interactive)
-  (cbcom-build)
-  (switch-to-buffer "*jekyll-serve*")
-  (message (cbcom-mode-line-status)))
-
-(defun cbcom-suffix-deploy ()
-  "Call deploy function"
-  (interactive)
-  (switch-to-buffer "*jekyll-serve*")
-  (cbcom-deploy))
+  (let ((service (prodigy-find-service "cbcom Jekyll Server")))
+    (prodigy-switch-to-process-buffer service)
+    ))
 
 (defun cbcom-suffix-open-project ()
   "Open the website Projectile project in a new perspective (spacemacs layout)"
@@ -245,13 +233,8 @@ Here the actual transient menu is defined that links to the previously defined s
   "Prefix with descriptions specified with slots."
   ["⭐️cb.com Command Center\n"
    ["Development"
-    ("s" "Start jekyll serve" cbcom-suffix-start-jekyll)
-    ("S" "Stop jekyll serve" cbcom-suffix-stop-jekyll)
-    ("l" "Open log buffer" cbcom-suffix-open-jekyll-log
-     :transient t)]
-   ["Deployment"
-    ("B" "Build site" cbcom-suffix-build :transient t)
-    ("D" "Deploy site" cbcom-suffix-deploy)]
+    ("p" "Manage processes" cbcom-suffix-open-prodigy)
+    ("l" "Open log buffer" cbcom-suffix-open-jekyll-log)]
    ["Files"
     ("o" "Open project folder" cbcom-suffix-open-project)
     ("b" "Open site in browser" cbcom-suffix-browse-local)
@@ -295,3 +278,7 @@ convert "*.png" -resize 800x -set filename:area "%t_w800" %[filename:area].png
 - [[https://orgmode.org/manual/Publishing-options.html][Publishing options (The Org Manual)]]
 - [[https://orgmode.org/worg/dev/org-export-reference.html][Org Export Reference Documentation]]
 - [[https://github.com/positron-solutions/transient-showcase][positron-solutions/transient-showcase: Example forms for transient UI's in Emacs]]
+- [[https://develop.spacemacs.org/layers/+tools/prodigy/README.html][Prodigy layer]] for Spacemacs powered by [[https://github.com/rejeep/prodigy.el][prodigy.el]]
+- Possible alternatives for a task runner interface
+  - [[https://github.com/casey/just][casey/just: 🤖 Just a command runner]]
+  - [[https://github.com/psibi/justl.el][psibi/justl.el: Major mode for driving just files.]]
