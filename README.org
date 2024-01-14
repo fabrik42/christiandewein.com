@@ -28,6 +28,12 @@ This variables point to different paths of the project that are used throughout 
 
 (defvar cbcom-template-path (concat cbcom-org-path "/_post_template.org")
   "Path to the template file used to create new posts.")
+
+(defvar cbcom-local-base-url "http://localhost:4000"
+  "The base URL of the local Jekyll server")
+
+(defvar cbcom-remote-base-url "https://christianbaeuerlein.com"
+  "The base URL of the deployed website")
 #+END_SRC
 ** Org Publishing aka HTML Export
 Setup the publishing process for the =_org= directory. In this case, an HTML exporter and an exporter for static files (simple copy).
@@ -87,7 +93,6 @@ Based on the template with the most important meta data structures, this functio
         (insert-file-contents template-path) ; Read the contents of the template file
         (goto-char (point-min))
         (while (search-forward "{%NAME%}" nil t) ; Replace all occurrences of {%NAME%}
-
           (replace-match name t t))
         (write-file filename))
       (find-file filename))))
@@ -117,8 +122,8 @@ Start and stop the =jekyll serve= process within Prodigy/emacs and log the outpu
 (prodigy-define-service :name "cbcom Jekyll Server"
   :command "bundle"
   :args '("exec" "jekyll" "serve")
-  :url "http://localhost:4000"
-  :cwd "/Users/fabrik42/dev/ruby/christianbaeuerlein_com"
+  :url cbcom-local-base-url
+  :cwd cbcom-base-path
   :tags '(cbcom jekyll)
   :on-output (lambda (&rest args)
     (let ((output (plist-get args :output))
@@ -139,7 +144,7 @@ The Jekyll build task, defined as Prodigy service.
 (prodigy-define-service :name "cbcom Jekyll Build"
   :command "bundle"
   :args '("exec" "jekyll" "build")
-  :cwd "/Users/fabrik42/dev/ruby/christianbaeuerlein_com"
+  :cwd cbcom-base-path
   :tags '(cbcom jekyll)
   :on-output (lambda (&rest args)
     (let ((output (plist-get args :output))
@@ -162,8 +167,8 @@ TODO: change to production deploy!
 (prodigy-define-service :name "cbcom Netflify Deploy"
   :command "netlify"
   :args '("deploy" "--dir" "./_site")
-  :cwd "/Users/fabrik42/dev/ruby/christianbaeuerlein_com"
-  :url "https://christianbaeuerlein.com"
+  :cwd cbcom-base-path
+  :url cbcom-remote-base-url
   :tags '(cbcom)
   :on-output (lambda (&rest args)
                (let ((output (plist-get args :output))
@@ -177,6 +182,7 @@ TODO: change to production deploy!
                  (when (s-matches? "exception" output)
                    (prodigy-set-status service 'failed)))))
 #+END_SRC
+
 ** Transient Menu
 [[https://magit.vc/manual/transient/][Transient]] is known as the library that powers the user interface of [[https://magit.vc][magit]].
 
@@ -212,12 +218,12 @@ Most of them are slim wrappers around functions defined above.
 (defun cbcom-suffix-browse-local ()
   "Open local website in browser"
   (interactive)
-  (browse-url "http://localhost:4000"))
+  (browse-url cbcom-local-base-url))
 
 (defun cbcom-suffix-browse-deployed ()
   "Open deployed website in browser"
   (interactive)
-  (browse-url "https://christianbaeuerlein.com"))
+  (browse-url cbcom-remote-base-url))
 
 (defun cbcom-suffix-create-post ()
   "Create a new file for a new post"
