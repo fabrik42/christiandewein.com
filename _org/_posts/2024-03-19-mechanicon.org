@@ -1,0 +1,46 @@
+#+BEGIN_EXPORT html
+---
+title: History of Mechanicon
+description: TODO - new post
+layout: post
+permalink: /mechanicon
+sitemap: false
+---
+#+END_EXPORT
+
+* {{ page.title }}
+This year - 2024 - the Mechanicon is taking place for the fifth time!
+
+Mechanicon is Europe’s biggest meetup/conference for people interested in mechanical keyboards. It takes place once a year in Frankfurt am Main/Germany.
+
+We started out with about 60 people in 2016, grew over the years and we were almost 400 attendees last year!
+
+It was never intended to grow this big. We never did any advertisement outside of community forums. Of course, while we were are very proud that so many people like the idea, it also creates a lot of challenges.
+
+** Throwback to 2016
+Let's take a trip back to 2016: The whole world was playing Pokemon Go, the most common password was ‘123456’ and '/r/mk' had around 120k subscribers, merely 10% of the size it has today.
+
+Three programmers were nerding out on their new hobby: Mechanical keyboards.
+
+You all know the rabbit hole we are talking about here: discovering the hobby, the manufactureres, the back and forths of the different parts and also the struggle: what should I get myself?
+
+Back then the keyboards we liked had to be bought directly from shops in  U.S., Japan or South Korea. This meant, ordering a keyboard was going all in, including high shipping costs, import taxes and not really a return policy.
+
+It was clear what we were missing: try before you buy.
+** The first Mechanicon
+Outside of our office, in real life, we did not know a single person interested in the hobby. So we founded a user group: Mechanical Keyboard Meetup Rhein Main.
+
+The first meetup was given the tongue-in-cheek name 'Mechanicon', suggesting it was a conference. In reality, we hoped to attract about a dozen people. In the end, it would be over 60!
+
+Only on the day of the Meetup it would become clear to us, that there was something special about this community and this event.
+
+People would come from Berlin, huge plastic bags with hundreds of keycaps in the trunk. They would come from France - by bus - with a douzen trackballs in their luggage. Manufacturers, bloggers, collectors, gamers, all came together to celebrate their hobby.
+
+This atmosphere, the excitement of everyone, the respect for the community and the love for the craft is what makes the Mechanicon what it is until this day.And it is also what motivates us to organize this event again and again.
+
+-----
+
+** Links
+- [[https://mechanicon.io/][Mechanicon]]
+- https://mastodon.social/@fabrik42
+- https://mechanicon.io/discord
