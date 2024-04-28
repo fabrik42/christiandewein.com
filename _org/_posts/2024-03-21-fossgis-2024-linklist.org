@@ -1,0 +1,45 @@
+#+BEGIN_EXPORT html
+---
+title:  FOSSGIS 2024 Linklist
+description: Personal link collection of things that I (re-)discovered during FOSSGIS 2024.
+layout: post
+permalink: /fossgis-2024-linklist
+---
+#+END_EXPORT
+
+* {{ page.title }}
+Personal link collection of things that I (re-)discovered during the [[https://fossgis-konferenz.de/2024/][FOSSGIS 2024 conference]].
+
+** Videos
+- [[https://media.ccc.de/c/fossgis2024][FOSSGIS 2024 - media.ccc.de]]
+- Favorite Talk: [[https://media.ccc.de/v/fossgis2024-39020-rumliche-fragmentierung-im-v-angebot-sichtbar-machen-dank-offenen-fahrplandaten][Räumliche Fragmentierung im ÖV-Angebot sichtbar machen - dank offenen Fahrplandaten]] von Theodor Rieche
+- Talk Geheimtipp: [[https://media.ccc.de/v/fossgis2024-39002-prozedurale-kunst-mit-qgis][Prozedurale Kunst mit QGIS]] von Johannes Kröger
+** Repos
+- [[https://www.bbox.earth/][BBOX Server]] - Composable spatial services written in Rust
+- [[https://duckdb.org][DuckDB]] - An in-process SQL OLAP database management system
+- [[https://github.com/geonetwork][geonetwork Github org]] - GeoNetwork is a catalog suited to publish information about geospatial data
+- [[https://github.com/zalf-rdm/geonode][geonode]] - GeoNode is an open source platform that facilitates the creation, sharing, and co
+- [[https://github.com/geopolars/geopolars][geopolars/geopolars]] - Geospatial extensions for Polars
+- [[https://leafmap.org/][leafmap]] - Geospatial analysis and interactive mapping in Jupyter
+- [[https://terrestris.github.io/ol-describe-map/main/examples/nominatim.html][ol-describe-map]] - Generate textual description of an OpenLayers map
+- [[https://github.com/CrunchyData/pg_featureserv][pg_featureserv]] - Lightweight RESTful Geospatial Feature Server for PostGIS in Go
+- [[https://github.com/pretzelai/pretzelai?tab=readme-ov-file][pretzelai]] - Open-source, browser-local data exploration using DuckDB-Wasm and PRQL
+- [[https://github.com/public-transport][public-transport]] Github organization
+** Open Data Platforms
+- [[https://ckan.org/][CKAN - The open source data management system]]
+- [[https://dkan.readthedocs.io/en/latest/][DKAN Open Data Portal]]
+- [[https://daten.greenpeace.de//][Greenpeace Datenportal]]
+- [[https://zenodo.org/][Zenodo]]
+** Projects, Portals & Products
+- [[https://vhhbus.de/hop/ahoi/][ahoi Hamburg by vhh.mobility]] - Autonomous driving in Hamburg
+- [[https://www.comaps.de/produkt.html][comaps]] - Digitales Werkzeug zur datengestützten Entscheidungsfindung für eine integrierte und nachhaltige Stadtentwicklung.
+- [[https://gbd-websuite.de/][GBD WebSuite]] - Webbasierte Open Source GIS Plattform zur Geodatenverarbeitung
+- [[https://www.geoportal.de/][Geoportal.de]] - Bundesamt für Kartographie und Geodäsie
+- [[https://www.ioer.de/projekte/goat-3-0][GOAT 3.0]] - Entwicklung eines digitalen Erreichbarkeitsinstruments für eine ausgeglichene Raum- und Verkehrsplanung
+- [[https://grass.osgeo.org/][GRASS GIS]] - Powerful raster, vector, and geospatial processing engines in a single integrated software suite
+- [[https://kommonitor.de/][KomMonitor]] - Kommunales Monitoring zur Raumentwicklung ([[https://essen.kommonitor.geoportal.ruhr/#!/][Demo]])
+- [[https://www.lizmap.com/en/][Lizmap]] - Create Web map applications with QGIS and Lizmap
+- [[https://mapbender.org/][Mapbender]] - Lösung zur Erstellung intuitiver und performanter WebGIS-Anwendungen
+- [[https://www.masterportal.org/features-en.html][Masterportal]] - Open Source Geo Portal
+- [[https://scs.community/de/2023/12/23/clusterstacks/][Sovereign Cloud Stack]] - Cluster Stacks
+- [[https://stacspec.org/en][STAC: SpatioTemporal Asset Catalogs]] - A common language to describe geospatial information
