@@ -106,4 +106,4 @@ Maybe someday we will decide to publish them. For now, we will keep them hidden 
 
 This article was first published {{page.date | date_to_long_string: "ordinal", "US" }}.
 
-Thank you for reading my article! If you spotted a mistake or you want to provide some feedback, [[https://christianbaeuerlein.com][please get in touch with me]].
+Thank you for reading my article! If you spotted a mistake or you want to provide some feedback, [[https://christiandewein.com][please get in touch with me]].

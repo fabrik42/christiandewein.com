@@ -1,9 +1,9 @@
-#+TITLE: christianbaeuerlein.com
+#+TITLE: christiandewein.com
 #+PROPERTY: header-args+ :comments both
 #+PROPERTY: header-args+ :mkdirp yes
 #+PROPERTY: header-args+ :tangle "/Users/fabrik42/.spacemacs.d/config/cbcom-config.el"
 
-This is the repository of my personal website: christianbaeuerlein.com
+This is the repository of my personal website: christiandewein.com
 
 The website is built by the static site generator [[https://jekyllrb.com/][Jekyll]]. However, this Readme also provides glue code that is used to integrate the editing experience of the website into my Emacs/Spacemacs setup.
 
@@ -17,7 +17,7 @@ Require dependencies, necessary to setup the customizations.
 This variables point to different paths of the project that are used throughout the scripts defined here.
 
 #+BEGIN_SRC emacs-lisp
-(defvar cbcom-base-path "/Users/fabrik42/dev/ruby/christianbaeuerlein_com"
+(defvar cbcom-base-path "/Users/fabrik42/dev/ruby/christiandewein_com"
   "Path to the base directory of the website.")
 
 (defvar cbcom-org-path (concat cbcom-base-path "/_org")
@@ -32,7 +32,7 @@ This variables point to different paths of the project that are used throughout 
 (defvar cbcom-local-base-url "http://localhost:4000"
   "The base URL of the local Jekyll server")
 
-(defvar cbcom-remote-base-url "https://christianbaeuerlein.com"
+(defvar cbcom-remote-base-url "https://christiandewein.com"
   "The base URL of the deployed website")
 #+END_SRC
 ** Org Publishing aka HTML Export

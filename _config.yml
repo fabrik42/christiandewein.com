@@ -1,10 +1,10 @@
-title: Christian Bäuerlein
+title: Christian Dewein
 email: fabrik42@gmail.com
 baseurl: ""
-url: "https://christianbaeuerlein.com"
+url: "https://christiandewein.com"
 
 description: >
-  Hi! My name is Christian Bäuerlein,
+  Hi! My name is Christian Dewein,
   a software developer living in Frankfurt, Germany.
 
 markdown: kramdown
@@ -38,13 +38,13 @@ logo: "/assets/social-link-logo.jpg"
 google_site_verification: "ok3_egP8JYWNjujovfiEWeCPFMnI9c49PYcBlAREkr4"
 
 author:
-  name: Christian Bäuerlein
+  name: Christian Dewein
   twitter: fabrik42
-  url: https://christianbaeuerlein.com
+  url: https://christiandewein.com
   picture: /assets/social-link-author.jpg
 
 social:
-  name: Christian Bäuerlein
+  name: Christian Dewein
   links:
     - https://twitter.com/fabrik42
     - https://mastodon.social/@fabrik42
