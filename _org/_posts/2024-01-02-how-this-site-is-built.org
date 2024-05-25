@@ -1,0 +1,29 @@
+#+BEGIN_EXPORT html
+---
+title: Publishing on the web with Jekyll, Emacs and Org-Mode
+description: TODO - new post
+layout: post
+permalink: /publishing-with-jekyll-emacs-org-mode
+draft: true
+---
+#+END_EXPORT
+
+* {{ page.title }}
+aka how-this-site-is-built
+
+** Zusammenspiel Editor und publishing platform
+- why?
+- org mode
+- clear: org mode can only be parsed by emacs
+** Static Site Generator
+- Jekyll
+- turbolinks?
+- no js built tool / no npm
+- no cookies / tracking
+- bootstrap (also no npm, little hack)
+- collections und data files for content
+- Deployment: Netlify
+** Emacs Features / Setup in Emacs
+- org to html to x workflow
+- vorstellung transient
+- link repo, link altes repo
