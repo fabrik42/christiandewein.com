@@ -5,6 +5,7 @@ description: A thorough review of the Ultimate Hacking keyboard and its customiz
 layout: post
 permalink: /ultimate-hacking-keyboard-review
 image: /assets/uhk-review/desk_0373.jpg
+redirect_to: https://christiandewein.com/ultimate-hacking-keyboard-review
 ---
 #+END_EXPORT
 

@@ -4,6 +4,7 @@ title: History of Mechanicon
 description: TODO - new post
 layout: post
 permalink: /mechanicon
+redirect_to: https://christiandewein.com/mechanicon
 sitemap: false
 ---
 #+END_EXPORT

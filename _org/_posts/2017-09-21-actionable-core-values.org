@@ -4,6 +4,7 @@ title: Actionable Core Values for your Engineering Team
 description: If you work in a team of developers, you should talk about your shared values as a team.
 layout: post
 permalink: /actionable-core-values-for-your-engineering-team
+redirect_to: https://christiandewein.com/actionable-core-values-for-your-engineering-team
 ---
 #+END_EXPORT
 
