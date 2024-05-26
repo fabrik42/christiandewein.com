@@ -1,0 +1,2 @@
+# Redirect all traffic with a 301 status code to the new domain
+https://christianbaeuerlein.com/* https://christiandewein.com/:splat 301!
