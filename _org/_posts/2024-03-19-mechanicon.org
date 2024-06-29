@@ -1,19 +1,21 @@
 #+BEGIN_EXPORT html
 ---
 title: History of Mechanicon
-description: TODO - new post
+description: The history of Europe's biggest event for mechanical computer keyboards
 layout: post
+image: /assets/mechanicon/mechanicon_header.jpg
 permalink: /mechanicon
-sitemap: false
 ---
 #+END_EXPORT
 
 * {{ page.title }}
-This year - 2024 - the Mechanicon is taking place for the fifth time!
+{% include image.html url=page.image description=page.description %}
+
+This year - 2024 - the Mechanicon happened for the fifth time!
 
 Mechanicon is Europe’s biggest meetup/conference for people interested in mechanical keyboards. It takes place once a year in Frankfurt am Main in Germany.
 
-We started out with about 60 people in 2016, grew over the years and we were almost 400 attendees last year!
+We started out with about 60 attendees in 2016, grew over the years and we were over 400 people this year!
 
 It was never intended to grow this big. We never did any advertisement outside of community forums. And while we are very proud that so many people like the idea, it also creates a lot of challenges.
 ** Throwback to 2016
@@ -39,7 +41,17 @@ This atmosphere, the excitement of everyone, the respect for the community and t
 
 -----
 
+#+BEGIN_EXPORT html
+<iframe width="100%" height="400" src="https://www.youtube-nocookie.com/embed/ZVF16j6_5t4?si=wkqGwjS9pI8ivms3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+#+END_EXPORT
+
+Thanks to Alceon for making the video!
+
+-----
+
 ** Links
-- [[https://mechanicon.io/][Mechanicon]]
-- https://mastodon.social/@fabrik42
-- https://mechanicon.io/discord
+- [[https://mechanicon.io/][Mechanicon Official Website]] with links and pictures from past events
+- [[https://mechanicon.io/discord][Mechanicon on Discord]]
+- [[https://mastodon.social/@fabrik42][Me on Mastodon]]
+- [[https://www.clickclackhack.de/054.html][CLICK! CLACK! HACK Podcast about Mechanicon 2023!]] (German)
+- [[https://www.clickclackhack.de/097.html][CLICK! CLACK! HACK Podcast about Mechanicon 2024!]] (German)
