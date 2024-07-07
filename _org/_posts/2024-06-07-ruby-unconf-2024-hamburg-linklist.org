@@ -1,0 +1,26 @@
+#+BEGIN_EXPORT html
+---
+title: Ruby Unconf 2024 Hamburg Linklist
+description: Personal link collection of things that I (re-)discovered during Ruby Unconf 2024.
+layout: post
+permalink: /ruby-unconf-2024-hamburg-linklist
+---
+#+END_EXPORT
+
+* {{ page.title }}
+Personal link collection of things that I (re-)discovered during the [[https://2024.rubyunconf.eu][Ruby Unconf 2024 in Hamburg]].
+
+** Ruby and Mechanical Keyboards
+- [[https://keebkaigi.org/2023/][KeebKaigi 2023]] Japanese Keyboard Conference
+- [[https://picoruby.github.io/][PicoRuby]] The smallest Ruby implementation for one-chip microcontrollers
+- [[https://github.com/picoruby/prk_firmware][picoruby/prk_firmware]] A keyboard firmware platform in PicoRuby
+- [[https://www.raspberrypi.com/documentation/microcontrollers/raspberry-pi-pico.html][Raspberry Pi Pico]] can be programmed with PicoRuby/PRK and can be mounted via USB to flash it
+** Online Resources
+- [[https://worrydream.com/][Bret Victor]] does interesting things
+- [[https://github.com/ddd-crew][Domain-Driven Design Crew]] Repo with all kinds of resources
+- [[https://www.pagetable.com/c64ref/c64disasm/][Ultimate C64 Reference]] C64 BASIC & KERNAL ROM Disassembly
+** Tools
+- [[https://github.com/Mozilla-Ocho/llamafile][llamafile]] Distribute and run LLMs with a single file
+- [[https://rabbit-shocker.org/en/][Rabbit]] the tool that Matz uses to do his presentations (turtle races bunny)
+- [[https://vice-emu.sourceforge.io/][VICE]] the Versatile Commodore Emulator
+- [[https://vroid.com/en/studio][VRoid Studio]] is a tool to create and use virtual avatars (Twitch streamers do this?)
