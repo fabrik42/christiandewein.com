@@ -1,0 +1,128 @@
+---
+title: Publishing on the web with Jekyll, Emacs and Org-Mode
+description: How I publish my website using Emacs, Org-Mode, and Jekyll for seamless content creation, low maintenance, and efficient automated deployment.
+layout: post
+permalink: /publishing-with-jekyll-emacs-org-mode
+draft: true
+---
+<div id="outline-container-orgdd1a87a" class="outline-1">
+<h1 id="orgdd1a87a">{{ page.title }}</h1>
+<div class="outline-text-1" id="text-orgdd1a87a">
+<p>
+This post describes how this site is built. It is arguably a rather simple site, but I like my setup very much.
+</p>
+
+<p>
+My setup is not only focussed on the generation of the website and serving of my content, but also on the convenience of maintaining and creating said content from my side.
+</p>
+
+<p>
+Both is combined in my custom Emacs setup with the goal to make it a powerful and enjoyable end-to-end publishing platform.
+</p>
+
+<p>
+It is a combination of proven technologies, that - when used wisely - allow a high degree of customization and low-maintenance efforts at the same time.
+</p>
+</div>
+<div id="outline-container-org97148c6" class="outline-2">
+<h2 id="org97148c6">Org-Mode</h2>
+<div class="outline-text-2" id="text-org97148c6">
+<p>
+I have been using Emacs and <a href="https://orgmode.org">Org-Mode</a> every day in my professional life for about a decade. So for me, the highest level of convenience for taking notes is to write them down in my <a href="https://emacs.christianbaeuerlein.com">Emacs setup</a> in an Org-Mode file. Not only do I prefer the syntax over markdown, I also memoized a lot of shortcuts on the keyboard that maximize text editing efficiency for me.
+</p>
+</div>
+</div>
+<div id="outline-container-org72365fe" class="outline-2">
+<h2 id="org72365fe">About publishing Org-Mode</h2>
+<div class="outline-text-2" id="text-org72365fe">
+<p>
+Over the years I came to the conclusion: <b>Only Emacs should be used to work with <code>.org</code> files</b>.
+</p>
+
+<p>
+I know there are plenty of Org-Mode parsers, viewers and publishers out there. But in the end all of these are incomplete attempts to mimic what makes Org-Mode special. They will all fall short of the original at some point.
+</p>
+
+<p>
+So for me it became clear that I should stick to the original publishing mechanism of Org-Mode. But: While it is great to export <code>.org</code> files to html, it feels rather complicated to build a whole site around this publishing mechanism.
+</p>
+
+<p>
+I resorted to another trusted technology of mine: <a href="https://jekyllrb.com/">Jekyll</a>.
+</p>
+</div>
+</div>
+<div id="outline-container-orgf77f1dd" class="outline-2">
+<h2 id="orgf77f1dd">Jekyll</h2>
+<div class="outline-text-2" id="text-orgf77f1dd">
+<p>
+Jekyll is a Ruby-based static site generator. I use it since around 2010 when I published my first Github page.
+</p>
+
+<p>
+Jekyll is based on long-living, stable Ruby libraries. In over 14 years, the combined effort spent on upgrading the dependencies of the multiple sites I run with it is probably less than one evening.
+</p>
+
+<p>
+It does not use npm, which is probably the most important factor to create a stable, low-maintenance tech setup these days. In general, this site does not use a JS-based build tool at all.
+</p>
+
+<p>
+I love the simplicity of Jekyll, yet I also got to learn of some nice features of the software over the years (like <a href="https://jekyllrb.com/docs/datafiles/">data files</a>, <a href="https://jekyllrb.com/docs/collections/">collections</a> or <a href="https://github.com/fabrik42/christiandewein.com/blob/main/_plugins/hooks.rb">custom hooks</a>).
+</p>
+</div>
+</div>
+<div id="outline-container-org504f62c" class="outline-2">
+<h2 id="org504f62c">Publishing</h2>
+<div class="outline-text-2" id="text-org504f62c">
+<p>
+The publishing involves both systems: Emacs converts <code>.org</code> content to HTML and Jekyll builds the whole rest of the page around it.
+</p>
+
+<p>
+I have configured Org-Mode's publishing system to handle all the specifics of content generation. The configuration specifies that all my <code>.org</code> files are stored in a specific directory (<code>./_org</code>), and whenever I make updates or save a file, Org-Mode exports them into HTML format.
+</p>
+
+<p>
+The generated HTML pages, as well as additional HTML pages and static assets such as images, CSS, and (in theory) JavaScript files are handled by the Jekyll build system to generate the the full website.
+</p>
+</div>
+</div>
+<div id="outline-container-org8ae3af3" class="outline-2">
+<h2 id="org8ae3af3">Emacs Integration</h2>
+<div class="outline-text-2" id="text-org8ae3af3">
+<p>
+To further streamline my workflow, I make use of the <a href="https://github.com/magit/transient">Transient</a> library in Emacs, which provides a convenient interface for executing various tasks related to the website.
+</p>
+
+<p>
+Transient allows me to define a custom command center within Emacs that brings together all the important functions I need to manage the site - from starting the local Jekyll server, to creating new posts, to viewing the site in the browser, or triggering a deployment.
+</p>
+
+<p>
+I host the site on Netlify, using the netlify-cli to push new versions of the website.
+</p>
+
+<p>
+I manage the deployment directly within Emacs, using <a href="https://github.com/rejeep/prodigy.el">Prodigy</a>, an excellent tool for managing services and tasks. Prodigy allows me to run short-lived tasks like `jekyll build` as well as the full deployment process, all from within Emacs.
+</p>
+</div>
+</div>
+<div id="outline-container-org2531133" class="outline-2">
+<h2 id="org2531133">Summary</h2>
+<div class="outline-text-2" id="text-org2531133">
+<p>
+Emacs, Org-Mode and Jekyll play very well together. They are all technologies that I enjoy for a very long time.
+</p>
+
+<p>
+They combine my favorite way to create content with my favorite way to deliver content. To have the best of both worlds is a very nice experience.
+</p>
+
+<p>
+This is a very indivdual setup that always had the goal to bring me joy personally.
+I do not intend to publish in any packaged way, however the setup is <a href="https://github.com/fabrik42/christiandewein.com/blob/main/README.org">fully documented</a> in the <a href="https://github.com/fabrik42/christiandewein.com">public repo of this website</a>.
+</p>
+</div>
+</div>
+</div>

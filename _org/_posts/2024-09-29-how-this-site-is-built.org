@@ -17,46 +17,38 @@ Both is combined in my custom Emacs setup with the goal to make it a powerful an
 
 It is a combination of proven technologies, that - when used wisely - allow a high degree of customization and low-maintenance efforts at the same time.
 ** Org-Mode
-I use Emacs and Org-Mode every day in my professional life for about a decade. So for me, the highest level of convenience for taking notes is to write them down in my [[https://emacs.christianbaeuerlein.com][Emacs setup]] in an Org-Mode file. Not only do I prefer the syntanx over markdown, I also memoized a lot of shortcuts on the keyboard that maximize text editing efficency for me.
+I have been using Emacs and [[https://orgmode.org][Org-Mode]] every day in my professional life for about a decade. So for me, the highest level of convenience for taking notes is to write them down in my [[https://emacs.christianbaeuerlein.com][Emacs setup]] in an Org-Mode file. Not only do I prefer the syntax over markdown, I also memoized a lot of shortcuts on the keyboard that maximize text editing efficiency for me.
 ** About publishing Org-Mode
 Over the years I came to the conclusion: *Only Emacs should be used to work with =.org= files*.
 
-I know there are plenty of Org-Mode parsers, viewers and publishers out there. But in the end all of these are an incomplete try to mimic what makes Org-Mode special. They all will fall short of the original at some point.
+I know there are plenty of Org-Mode parsers, viewers and publishers out there. But in the end all of these are incomplete attempts to mimic what makes Org-Mode special. They will all fall short of the original at some point.
 
 So for me it became clear that I should stick to the original publishing mechanism of Org-Mode. But: While it is great to export =.org= files to html, it feels rather complicated to build a whole site around this publishing mechanism.
 
-I resorted to another old, but trusted technology of mine: [[https://jekyllrb.com/][Jekyll]].
+I resorted to another trusted technology of mine: [[https://jekyllrb.com/][Jekyll]].
 ** Jekyll
-Jekyll is a Ruby-based static site generator. I use it since around 2010 when I published my first Github pages.
+Jekyll is a Ruby-based static site generator. I use it since around 2010 when I published my first Github page.
 
 Jekyll is based on long-living, stable Ruby libraries. In over 14 years, the combined effort spent on upgrading the dependencies of the multiple sites I run with it is probably less than one evening.
 
 It does not use npm, which is probably the most important factor to create a stable, low-maintenance tech setup these days. In general, this site does not use a JS-based build tool at all.
 
-I love the simplicity of Jekyll, yet I also got to learn of some nice features of the software over the years (like [[https://jekyllrb.com/docs/datafiles/][data files]], [[https://jekyllrb.com/docs/collections/][collections]] or custom hooks).
+I love the simplicity of Jekyll, yet I also got to learn of some nice features of the software over the years (like [[https://jekyllrb.com/docs/datafiles/][data files]], [[https://jekyllrb.com/docs/collections/][collections]] or [[https://github.com/fabrik42/christiandewein.com/blob/main/_plugins/hooks.rb][custom hooks]]).
 ** Publishing
-The publishing process of my website is tightly integrated with Emacs and Org-Mode, which ensures a seamless and efficient workflow. Essentially, when I write my content in Org-Mode, it's automatically converted into HTML and prepared for Jekyll to build the site.
+The publishing involves both systems: Emacs converts =.org= content to HTML and Jekyll builds the whole rest of the page around it.
 
-So both systems are involved: Emacs converts =.org= content to HTML and Jekyll builds the whole rest of the page around it.
+I have configured Org-Mode's publishing system to handle all the specifics of content generation. The configuration specifies that all my =.org= files are stored in a specific directory (=./_org=), and whenever I make updates or save a file, Org-Mode exports them into HTML format.
 
-I have configured Org-Mode's publishing system to handle all the specifics of content generation. The configuration specifies that all my =.org= files are stored in a specific directory (=./_org=), and whenever I make updates or save a file, Org-Mode exports them into HTML format. This process ensures that all necessary posts, pages, and static content like images or stylesheets are published correctly.
-
-The automation is further enhanced by using an `after-save` hook in Emacs. This means that whenever I save an Org-Mode file, the system automatically triggers the publishing process, ensuring that my site is always up to date without requiring any manual steps.
-
-Additionally, static assets such as images, CSS, and (in theory) JavaScript files are handled by the same Jekyll publishing system, making sure they are correctly copied and served alongside the HTML content.
-
-Overall, this setup minimizes manual work and allows me to focus purely on writing content. The system takes care of publishing everything behind the scenes, reducing both maintenance efforts and the chances of errors.
-I host the site on Netlify, using the netlify-cli to push new versions of the website.
-** Deployment
-For deployment, I use Netlify and netlify-cli, which makes the process of pushing updates to the live site effortless. Once the content is published locally, Jekyll handles the static site generation, and I use a simple command to trigger the deployment to Netlify.
+The generated HTML pages, as well as additional HTML pages and static assets such as images, CSS, and (in theory) JavaScript files are handled by the Jekyll build system to generate the the full website.
 ** Emacs Integration
-I manage the deployment directly within Emacs, using [[https://github.com/rejeep/prodigy.el][Prodigy]], an excellent tool for managing services and tasks. Prodigy allows me to run short-lived tasks like `jekyll build` as well as the full deployment process, all from within Emacs.
-
 To further streamline my workflow, I make use of the [[https://github.com/magit/transient][Transient]] library in Emacs, which provides a convenient interface for executing various tasks related to the website.
 
 Transient allows me to define a custom command center within Emacs that brings together all the important functions I need to manage the site - from starting the local Jekyll server, to creating new posts, to viewing the site in the browser, or triggering a deployment.
-** Summary
 
+I host the site on Netlify, using the netlify-cli to push new versions of the website.
+
+I manage the deployment directly within Emacs, using [[https://github.com/rejeep/prodigy.el][Prodigy]], an excellent tool for managing services and tasks. Prodigy allows me to run short-lived tasks like `jekyll build` as well as the full deployment process, all from within Emacs.
+** Summary
 Emacs, Org-Mode and Jekyll play very well together. They are all technologies that I enjoy for a very long time.
 
 They combine my favorite way to create content with my favorite way to deliver content. To have the best of both worlds is a very nice experience.
