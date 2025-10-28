@@ -12,6 +12,7 @@ Require dependencies, necessary to setup the customizations.
 
 #+BEGIN_SRC emacs-lisp
 (require 'ox-publish)
+(require 'transient)
 #+END_SRC
 
 This variables point to different paths of the project that are used throughout the scripts defined here.
