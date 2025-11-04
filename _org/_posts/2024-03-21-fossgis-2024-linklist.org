@@ -4,6 +4,7 @@ title:  FOSSGIS 2024 Linklist
 description: Personal link collection of things that I (re-)discovered during FOSSGIS 2024.
 layout: post
 permalink: /fossgis-2024-linklist
+tags: linklist
 ---
 #+END_EXPORT
 

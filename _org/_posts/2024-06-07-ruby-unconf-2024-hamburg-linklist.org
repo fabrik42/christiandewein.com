@@ -4,6 +4,7 @@ title: Ruby Unconf 2024 Hamburg Linklist
 description: Personal link collection of things that I (re-)discovered during Ruby Unconf 2024.
 layout: post
 permalink: /ruby-unconf-2024-hamburg-linklist
+tags: linklist
 ---
 #+END_EXPORT
 
