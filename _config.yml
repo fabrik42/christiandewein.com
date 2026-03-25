@@ -9,6 +9,11 @@ description: >
 
 markdown: kramdown
 
+sass:
+  quiet_deps: true
+  silence_deprecations:
+    - import
+
 plugins:
   - jekyll-feed
   - jekyll-last-modified-at
