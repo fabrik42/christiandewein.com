@@ -1,6 +1,7 @@
 #+BEGIN_EXPORT html
 ---
 name: CNDY
+order: 4
 ---
 #+END_EXPORT
 
