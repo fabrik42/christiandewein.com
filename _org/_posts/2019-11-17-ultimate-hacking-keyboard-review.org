@@ -198,9 +198,3 @@ If you are willing to invest a lot of time and effort into customizing your setu
 So if you are into ergonomics, if you want to discover the world of split keyboards and you want to customize the sh\*t out of your keyboards, then this is the keyboard for you.
 
 {% include image.html url="./assets/uhk-review/desk_0373.jpg" description="Spacemacs + UHK = <3" %}
-
------
-
-This article was first published {{page.date | date_to_long_string: "ordinal", "US" }}.
-
-Thank you for reading my article! If you spotted a mistake or you want to provide some feedback, [[https://christiandewein.com][please get in touch with me]].

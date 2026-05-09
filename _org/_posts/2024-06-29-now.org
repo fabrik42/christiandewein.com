@@ -3,6 +3,7 @@
 title: Me, right now
 description: What I am doing right now in case we didn't meet for a while and you want to catch up.
 layout: post
+show_modified: true
 permalink: /now
 ---
 #+END_EXPORT
@@ -18,12 +19,8 @@ I live in Frankfurt am Main and still enjoy living in this city!
 I am the CTO of the ioki GmbH in Frankfurt.
 Since 2017 I am part of this company and I am very proud of it.
 ** Travelling
-Over the last years, I did quite some travelling. I like to explore nature and experience wildlife. Most notably, I travelled to Costa Rica, Namibia and the west coast of North America since the end of the pandemic.
+Over the last years, I did quite some travelling. I like to explore nature and experience wildlife. Most notably, I travelled to Costa Rica, Namibia, the west coast of North America and South Africa.
 ** Meetups
 I love being part of Frankfurt's meetup scene. I organize a couple meetups myself and visit even more. I also like to serve as a host for other meetups at my company.
 
 Most notably I organize the [[./mechanicon][Mechanicon - Europe's biggest mechanical keyboard conference]].
-
------
-
-Last update: {{ page.last_modified_at | date: "%b %d, %Y" }}

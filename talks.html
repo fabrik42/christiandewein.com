@@ -11,29 +11,26 @@ description: Talks that I gave at different occassions.
   {% for talk in site.data.talks %}
   {% if talk.nested %}
   <li>
-    <div class="info">
-      <a href="{{talk.url}}">{{talk.title}}</a>
-      {% if talk.is_favorite %}⭐️{% endif %}
-      <br/>
-      <span class="text-muted">
-        {% for occassion in talk.occassions %}
-        <span class="text-muted">
-          at <a href="{{occassion.url}}">{{occassion.name}}</a> (<a href="{{occassion.slides_url}}">{{occassion.slides_title}}</a>), {{ occassion.year }}
-        </span><br/>
-        {% endfor %}
-      </span>
+    <div class="list-heading">
+      <a class="list-title" href="{{ talk.url }}">{{ talk.title }}</a>
+      {% if talk.is_favorite %}<span class="list-eyebrow">⟡ Featured</span>{% endif %}
     </div>
+    {% for occassion in talk.occassions %}
+    <span class="list-meta">
+      at <a href="{{ occassion.url }}">{{ occassion.name }}</a>
+      (<a href="{{ occassion.slides_url }}">{{ occassion.slides_title }}</a>), {{ occassion.year }}
+    </span>
+    {% endfor %}
   </li>
   {% else %}
   <li>
-    <div class="info">
-      <a href="{{talk.slides_url}}">{{talk.title}}</a>
-      {% if talk.is_favorite %}⭐️{% endif %}
-      <br/>
-      <span class="text-muted">
-        at <a href="{{talk.occassion_url}}">{{talk.occassion}}</a>, {{ talk.year }}
-      </span>
+    <div class="list-heading">
+      <a class="list-title" href="{{ talk.slides_url }}">{{ talk.title }}</a>
+      {% if talk.is_favorite %}<span class="list-eyebrow">⟡ Featured</span>{% endif %}
     </div>
+    <span class="list-meta">
+      at <a href="{{ talk.occassion_url }}">{{ talk.occassion }}</a>, {{ talk.year }}
+    </span>
   </li>
   {% endif %}
   {% endfor %}

@@ -2,11 +2,8 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    {% if page.title %}
-    <title>{{page.title}} by {{site.title}}</title>
-    {% else %}
-    <title>{{site.title}}</title>
-    {% endif %}
+    {% if page.title %}<title>{{ page.title }} by {{ site.title }}</title>
+    {% else %}<title>{{ site.title }}</title>{% endif %}
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="keywords" content="christian, dewein, baeuerlein, bäuerlein, bauerlein, fabrik42, frankfurt, ruby, ioki">
     <link rel="stylesheet" href="/assets/css/styles.css">
@@ -19,20 +16,28 @@
     <link rel="manifest" href="/assets/favicon/site.webmanifest">
   </head>
   <body>
-    <nav class="navbar">
-      <div class="container-md">
-        <a class="navbar-brand" href="/">Christian Dewein</a>
-      </div>
-    </nav>
+    <div class="site">
+      <header class="site-header">
+        <a class="wordmark" href="/">Christian Dewein</a>
+        <nav class="site-nav">
+          {% assign n = page.name %}
+          <a href="/"{% if n == 'index.html' %} class="is-active"{% endif %}>About</a>
+          <a href="/now"{% if page.url == '/now' %} class="is-active"{% endif %}>Now</a>
+          <a href="/projects"{% if n == 'projects.html' %} class="is-active"{% endif %}>Projects</a>
+          <a href="/talks"{% if n == 'talks.html' %} class="is-active"{% endif %}>Talks</a>
+          <a href="/podcasts"{% if n == 'podcasts.html' %} class="is-active"{% endif %}>Podcasts</a>
+          <a href="/articles"{% if n == 'articles.html' %} class="is-active"{% endif %}>Articles</a>
+        </nav>
+      </header>
 
-    {{ content }}
+      <main class="site-main">
+        {{ content }}
+      </main>
 
-    <div class="container-md">
-      <footer class="pt-5 my-5">
-        <p class="text-end">
-          <a class="text-muted" href="/imprint">Imprint</a> •
-          <a class="text-muted" href="/feed.xml">RSS Feed</a>
-        </p>
+      <footer class="site-footer">
+        <a href="/imprint">Imprint</a>
+        <span>•</span>
+        <a href="/feed.xml">RSS Feed</a>
       </footer>
     </div>
   </body>
