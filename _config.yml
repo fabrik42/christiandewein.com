@@ -30,7 +30,11 @@ defaults:
       path: "" # an empty string here means all files in the project
     values:
       layout: "default"
-      image: "/assets/social-link-image.jpg"
+      image:
+        path: "/assets/social-link-image.jpg"
+        width: 2048
+        height: 1028
+        alt: "Christian Dewein"
 
 exclude:
   - README.org
@@ -47,14 +51,12 @@ google_site_verification: "ok3_egP8JYWNjujovfiEWeCPFMnI9c49PYcBlAREkr4"
 
 author:
   name: Christian Dewein
-  twitter: fabrik42
   url: https://christiandewein.com
   picture: /assets/social-link-author.jpg
 
 social:
   name: Christian Dewein
   links:
-    - https://twitter.com/fabrik42
     - https://mastodon.social/@fabrik42
     - https://www.linkedin.com/in/christian-baeuerlein
     - https://github.com/fabrik42
