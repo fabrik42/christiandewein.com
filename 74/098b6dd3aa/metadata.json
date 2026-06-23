@@ -1,0 +1,37 @@
+{
+  "cli_version": "0.7.7",
+  "checkpoint_id": "74098b6dd3aa",
+  "strategy": "manual-commit",
+  "branch": "redesign",
+  "checkpoints_count": 1,
+  "files_touched": [
+    "README.org",
+    "_org/_posts/2017-09-21-actionable-core-values.org",
+    "_org/_posts/2019-11-17-ultimate-hacking-keyboard-review.org",
+    "_org/_posts/2024-03-19-mechanicon.org",
+    "_org/_posts/2024-09-29-how-this-site-is-built.org",
+    "_org/_posts/2024-11-03-leaddev-berlin-2024-linklist.org",
+    "_org/_projects/cndy.org",
+    "_posts/2017-09-21-actionable-core-values.html",
+    "_posts/2019-11-17-ultimate-hacking-keyboard-review.html",
+    "_posts/2024-03-19-mechanicon.html",
+    "_posts/2024-09-29-how-this-site-is-built.html",
+    "_posts/2024-11-03-leaddev-berlin-2024-linklist.html",
+    "_projects/cndy.html"
+  ],
+  "sessions": [
+    {
+      "metadata": "/74/098b6dd3aa/0/metadata.json",
+      "transcript": "/74/098b6dd3aa/0/full.jsonl",
+      "content_hash": "/74/098b6dd3aa/0/content_hash.txt",
+      "prompt": "/74/098b6dd3aa/0/prompt.txt"
+    }
+  ],
+  "token_usage": {
+    "input_tokens": 9,
+    "cache_creation_tokens": 29386,
+    "cache_read_tokens": 156827,
+    "output_tokens": 1399,
+    "api_call_count": 7
+  }
+}

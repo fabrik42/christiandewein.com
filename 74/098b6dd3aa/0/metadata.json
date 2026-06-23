@@ -1,0 +1,90 @@
+{
+  "cli_version": "0.7.7",
+  "checkpoint_id": "74098b6dd3aa",
+  "session_id": "986e31af-c595-4ecf-9414-b20befcc8008",
+  "strategy": "manual-commit",
+  "created_at": "2026-06-23T09:19:51.323148Z",
+  "branch": "redesign",
+  "checkpoints_count": 1,
+  "files_touched": [
+    "README.org",
+    "_org/_posts/2017-09-21-actionable-core-values.org",
+    "_org/_posts/2019-11-17-ultimate-hacking-keyboard-review.org",
+    "_org/_posts/2024-03-19-mechanicon.org",
+    "_org/_posts/2024-09-29-how-this-site-is-built.org",
+    "_org/_posts/2024-11-03-leaddev-berlin-2024-linklist.org",
+    "_org/_projects/cndy.org",
+    "_posts/2017-09-21-actionable-core-values.html",
+    "_posts/2019-11-17-ultimate-hacking-keyboard-review.html",
+    "_posts/2024-03-19-mechanicon.html",
+    "_posts/2024-09-29-how-this-site-is-built.html",
+    "_posts/2024-11-03-leaddev-berlin-2024-linklist.html",
+    "_projects/cndy.html"
+  ],
+  "agent": "Claude Code",
+  "model": "claude-opus-4-7",
+  "turn_id": "f2b599328013",
+  "token_usage": {
+    "input_tokens": 9,
+    "cache_creation_tokens": 29386,
+    "cache_read_tokens": 156827,
+    "output_tokens": 1399,
+    "api_call_count": 7
+  },
+  "initial_attribution": {
+    "calculated_at": "2026-06-23T09:19:51.319157Z",
+    "agent_lines": 0,
+    "agent_removed": 0,
+    "human_added": 0,
+    "human_modified": 0,
+    "human_removed": 165,
+    "total_committed": 0,
+    "total_lines_changed": 165,
+    "agent_percentage": 0,
+    "metric_version": 2
+  },
+  "prompt_attributions": [
+    {
+      "checkpoint_number": 1,
+      "user_lines_added": 613,
+      "user_lines_removed": 165,
+      "agent_lines_added": 0,
+      "agent_lines_removed": 0,
+      "user_added_per_file": {
+        ".claude/agents/entire-search.md": 25,
+        ".claude/settings.json": 84,
+        ".claude/settings.local.json": 20,
+        "README.org": 4,
+        "_org/_posts/2017-09-21-actionable-core-values.org": 2,
+        "_org/_posts/2019-11-17-ultimate-hacking-keyboard-review.org": 11,
+        "_org/_posts/2024-03-19-mechanicon.org": 2,
+        "_org/_posts/2024-09-29-how-this-site-is-built.org": 2,
+        "_org/_posts/2024-11-03-leaddev-berlin-2024-linklist.org": 1,
+        "_org/_posts/2026-04-14-ai-thoughts.org": 109,
+        "_org/_projects/cndy.org": 1,
+        "_posts/2017-09-21-actionable-core-values.html": 38,
+        "_posts/2019-11-17-ultimate-hacking-keyboard-review.html": 53,
+        "_posts/2024-03-19-mechanicon.html": 14,
+        "_posts/2024-09-29-how-this-site-is-built.html": 23,
+        "_posts/2024-11-03-leaddev-berlin-2024-linklist.html": 13,
+        "_posts/2026-04-14-ai-thoughts.html": 210,
+        "_projects/cndy.html": 1
+      },
+      "user_removed_per_file": {
+        "README.org": 4,
+        "_org/_posts/2017-09-21-actionable-core-values.org": 2,
+        "_org/_posts/2019-11-17-ultimate-hacking-keyboard-review.org": 11,
+        "_org/_posts/2024-03-19-mechanicon.org": 2,
+        "_org/_posts/2024-09-29-how-this-site-is-built.org": 2,
+        "_org/_posts/2024-11-03-leaddev-berlin-2024-linklist.org": 1,
+        "_org/_projects/cndy.org": 1,
+        "_posts/2017-09-21-actionable-core-values.html": 38,
+        "_posts/2019-11-17-ultimate-hacking-keyboard-review.html": 53,
+        "_posts/2024-03-19-mechanicon.html": 14,
+        "_posts/2024-09-29-how-this-site-is-built.html": 23,
+        "_posts/2024-11-03-leaddev-berlin-2024-linklist.html": 13,
+        "_projects/cndy.html": 1
+      }
+    }
+  ]
+}
