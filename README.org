@@ -66,7 +66,7 @@ Setup the publishing process for the =_org= directory. In this case, an HTML exp
 
 Now, we would be able to publish (aka export as HTML) the org files by calling =(org-publish "org-cdcom")= and =(org-publish "org-static-cdcom")= directly.
 
-But we want to autmate it. So we set up an =after-save-hook= that publishes all files, everytime an =.org= file in the website folder gets saved. Caching aka skipping of unchanged files is handled by the org publishing process automatically.
+But we want to automate it. So we set up an =after-save-hook= that publishes all files, every time an =.org= file in the website folder gets saved. Caching aka skipping of unchanged files is handled by the org publishing process automatically.
 
 #+BEGIN_SRC emacs-lisp
 (defun cdcom-publish-org-files ()
@@ -101,7 +101,7 @@ Based on the template with the most important meta data structures, this functio
 ** Process and Task Management
 The management of the local dev processes and tasks is taken care of by [[https://github.com/rejeep/prodigy.el/tree/master][prodigy.el]] and its [[https://develop.spacemacs.org/layers/+tools/prodigy/README.html][Spacemacs layer]].
 
-I think usually Prodigy is meant to manage long-running services like a dev server. However, I also want to use is for the short-lived =jekyll build= command. This does not work perfectly, but I added an additional status to signal that the build task is done.
+I think usually Prodigy is meant to manage long-running services like a dev server. However, I also want to use it for the short-lived =jekyll build= command. This does not work perfectly, but I added an additional status to signal that the build task is done.
 
 #+BEGIN_SRC emacs-lisp
 (prodigy-define-status :id 'done
@@ -160,12 +160,12 @@ The Jekyll build task, defined as Prodigy service.
         (prodigy-set-status service 'failed)))))
 #+END_SRC
 *** Deployment
-Deploy the website using the =netflify cli= with Prodigy/emacs.
+Deploy the website using the =netlify cli= with Prodigy/emacs.
 
 TODO: change to production deploy!
 
 #+BEGIN_SRC emacs-lisp
-(prodigy-define-service :name "cdcom Netflify Deploy"
+(prodigy-define-service :name "cdcom Netlify Deploy"
   :command "netlify"
   :args '("deploy" "--prod" "--dir" "./_site")
   :cwd cdcom-base-path

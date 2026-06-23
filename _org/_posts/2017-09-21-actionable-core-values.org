@@ -30,7 +30,7 @@ Sometimes these kind of “core-value-finding team offsites” are primarily a w
 
 I didn’t want us to define core values as an end in itself, but as a base for further actions to take our team to the next level. If you don’t live by a value, it’s not really a value to you. In order to live by these values, they must be actionable.
 
-So an additional task, beyond the definition of values, would be to put some thought into actions that bring these values to live. Which daily routines, tools, processes, behaviours or events can support a value?
+So an additional task, beyond the definition of values, would be to put some thought into actions that bring these values to life. Which daily routines, tools, processes, behaviours or events can support a value?
 
 By reflecting about the values and how to make them actionable, we would have a much more intensive and detailed discussion about every proposed value.
 
@@ -83,7 +83,7 @@ The idea was to find things in our workflow that would support our core values: 
 
 We presented and discussed the ideas and, most importantly, we appointed people to be responsible for actionable items they cared for.
 
-This is when this offsite ended. We were able talk about a lot of things for the present and the future of this team, but it was also clear that we needed to take care of the results to prevent them from vanishing.
+This is when this offsite ended. We were able to talk about a lot of things for the present and the future of this team, but it was also clear that we needed to take care of the results to prevent them from vanishing.
 ** One Month Later — The Aftermath
 I waited one month to write up this article, because I wanted to see if the results of this offsite would last. The offsite was not meant to change the life of every team member, but I really hoped it would have a positive, sustainable impact on the way we work.
 

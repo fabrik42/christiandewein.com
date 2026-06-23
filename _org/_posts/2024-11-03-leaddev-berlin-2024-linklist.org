@@ -22,7 +22,7 @@ Personal link collection of things that I (re-)discovered during the [[https://l
 - Circles of Influence, Concern, and Control (link suchen)
 - Service Catalogues
   - mapping all the things (ist das eine Prozesslandkarte?)
-  - people us [[https://backstage.io/][Backstage Software Catalog and Developer Platform]] for this
+  - people use [[https://backstage.io/][Backstage Software Catalog and Developer Platform]] for this
   - plus 2 more? see ? [[https://twitter.com/LisaKC_][Lisa Karlin Curtis (@LisaKC_) / X]] presentation
 - [[https://basecamp.com/shapeup][Shape Up]] Product development workflow by 37Signals/Basecamp
 ** Tools

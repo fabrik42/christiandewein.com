@@ -42,7 +42,7 @@ The UHK has a nice packaging and even greets you with a thank you note from the 
 
 {% include image.html url="./assets/uhk-review/onboarding_ergonomics.jpg" description="Ergonomics are an important part of the onboarding" %}
 
-The onboarding tutorial is very good. You get introduced to the keyboard and *how* you can use the keyboard in a ergonomic way, something I highly appreciate.
+The onboarding tutorial is very good. You get introduced to the keyboard and *how* you can use the keyboard in an ergonomic way, something I highly appreciate.
 
 I think there is even room for more: Tenting or Tilting? For now I go with **negative tilting**, but since you can not have both with the UHK, I would be happy to get even more information to make a decision on this.
 
@@ -55,7 +55,7 @@ Again, the manual for this is very good and precise.
 
 {% include image.html url="./assets/uhk-review/back_0180.jpg" description="The back side of the keyboard" %}
 
-The alignment of the components before fixation is pretty straigtforward. There is always some knob or cavity that helps to set them properly.
+The alignment of the components before fixation is pretty straightforward. There is always some knob or cavity that helps to set them properly.
 
 The fixation itself is a bit trickier than anticipated. The UHK tutorial even [[https://www.youtube.com/watch?v=J3aGynmGvfo][provides a video]] how to drive screws into plastic. But to be honest, I didn't get it - it says the screw should click(?), never clicked for me though (pun intended).
 
@@ -89,7 +89,7 @@ First things first, the Ultimate Hacking Keyboard is very comfortable to type on
 
 I never *really* used a split keyboard and this one comes very naturally to me. Neither having two parts, nor the tilting of the board affects me.
 
-I takes just a few minutes to get me into my typing flow and I feel comfortable. An important part in this is probably the key layout that is very close to a "normal" keyboard, especially when compared to other split keyboards.
+It takes just a few minutes to get me into my typing flow and I feel comfortable. An important part in this is probably the key layout that is very close to a "normal" keyboard, especially when compared to other split keyboards.
 
 The keyboard has a good weight so you can be sure it can keep a stable position on your desk. Nothing clatters or slips, even with the tenting. It is a very solid keyboard and I like it a lot.
 
@@ -108,14 +108,14 @@ But on the UHK there are no dedicated arrow keys. You have to press the =Mod= ke
 
 As you may have seen on the linked Apple support page, most of this can also be done without the use of arrow keys (in Emacs style, actually). I just have to revert decades of muscle memory, so this will cause some pain over the next days and weeks.
 
-If you look closer at the keyboard, you will also notice that UHK sneaked an additional key between the =Cmd= keys and the =Space= bar keys: the =Fn= key. First I was hesistant to this. But then I realized they took the room for the =Fn= keys from the =Space= key which means the position of the =Cmd= key stays the same compared to other keyboards. After some back and forth I decided to not change the position of the =Cmd= key. For my muscle memory the physical position of the key seems more important than the strict order of the keys, so in practice it does not bother me that much.
+If you look closer at the keyboard, you will also notice that UHK sneaked an additional key between the =Cmd= keys and the =Space= bar keys: the =Fn= key. First I was hesitant to this. But then I realized they took the room for the =Fn= keys from the =Space= key which means the position of the =Cmd= key stays the same compared to other keyboards. After some back and forth I decided to not change the position of the =Cmd= key. For my muscle memory the physical position of the key seems more important than the strict order of the keys, so in practice it does not bother me that much.
 
 Another important anomaly is that UHK placed the key for the =Mouse= layer where you can usually find the =Caps Lock= key. Like a lot of VIM/evil-mode users I mapped =Caps Lock= to  =Esc= (when pressed alone) and =Ctrl= (when pressed with other keys), an essential keybinding that I am not willing to lose. So I will need to find another place for the mouse layer key.
 
 ** The big remapping begins with the UHK Agent
 {% include image.html url="./assets/uhk-review/uhk_agent.png" description="UHK Agent" %}
 
-The UHK Agent is easy to use and pretty straightforward. You don't need to set the keyboard in to a special *flash* mode. The keyboard must be plugged in, you start the Agent, everything is ready.
+The UHK Agent is easy to use and pretty straightforward. You don't need to set the keyboard into a special *flash* mode. The keyboard must be plugged in, you start the Agent, everything is ready.
 
 My first change is to remap =Caps Lock= from =Mouse= to =Esc/Ctrl=. The user interface is very self-explanatory and it just takes a second to save the changes to the keyboard.
 
@@ -125,11 +125,11 @@ The UHK supports multiple keymaps and you can use shortcuts to switch between QW
 
 The UHK comes with three small fourteen segment displays built into the case. As far as I could find out they are only capable of showing the current keymap. Otherwise they are rather useless for now.
 
-[[https://github.com/UltimateHackingKeyboard/agent/issues/660][There are amibitons to make them more interesting]], which is good, because I don't need to see that I use Mac QWERTY all the time. I hope for this to arrive sooner than later. Until then it is just a bit weird that you have such a prominent component to show only such a specific detail.
+[[https://github.com/UltimateHackingKeyboard/agent/issues/660][There are ambitions to make them more interesting]], which is good, because I don't need to see that I use Mac QWERTY all the time. I hope for this to arrive sooner than later. Until then it is just a bit weird that you have such a prominent component to show only such a specific detail.
 
 {% include image.html url="./assets/uhk-review/lol_0364.jpg" description="Display shows your current keymap, not more, not less" %}
 
-Lifehack: The three letter abbreviation that you can see can be changed in the UHK agent. Another alternative is to just set the brightness of the display to zero to avoid any distraction alltogether.
+Lifehack: The three letter abbreviation that you can see can be changed in the UHK agent. Another alternative is to just set the brightness of the display to zero to avoid any distraction altogether.
 
 At the first look, I didn't like the small extra buttons on the bottom of the case. But since I am in severe need for extra keys I start to appreciate them. They feel like a mouse key, yet work pretty good as modifier keys.
 
@@ -144,7 +144,7 @@ You can see my modified keymap in the screenshot. Some of the changes invoke imm
 However, note-taking in evil mode is now a pleasure and I am happy to test the keyboard for an extended period of time, to really find out if it works for me.
 
 ** Two weeks in...
-For two weeks I use the keyboard about 50% of the time and a laptop keyboard for the other 50%. This causes no noticable confusion. Somehow my muscle memory is able to distinguish between the two contexts.
+For two weeks I use the keyboard about 50% of the time and a laptop keyboard for the other 50%. This causes no noticeable confusion. Somehow my muscle memory is able to distinguish between the two contexts.
 
 So I remapped the =Fn= keys between =Cmd= and =Space= to =Mod= and changed the arrow key positions in the mod mode to VIM style. This means, pressing =Mod= with =j= and =k= for =up= and =down= now works in every app. **I never want to miss this again**!
 
@@ -157,9 +157,9 @@ The split-factor of the keyboard is pretty nice. I still feel like I don't have 
 I use the keyboard while sitting down and standing at my desk. The keyboard is steady and stays put during usage.
 
 ** Switches
-Due to the Mechanicon, I think I was able to try out a lot of switches over the years. I know what I like but in everyday use I am not able to determine the sublte differences between similar switches.
+Due to the Mechanicon, I think I was able to try out a lot of switches over the years. I know what I like but in everyday use I am not able to determine the subtle differences between similar switches.
 
-For the last five years, I used Cherry MX Browns, Cherry MX Blues, Gatereon Greens and Topre 45g switches as my daily drivers.
+For the last five years, I used Cherry MX Browns, Cherry MX Blues, Gateron Greens and Topre 45g switches as my daily drivers.
 
 I chose Kailh Brown for this board, because I wanted something similar to MX Brown. In practice I actually can't determine a difference.
 
@@ -184,7 +184,7 @@ The firmware as well as the electronics design and pretty much anything else is 
 
 Additionally, you can clearly see that the keyboard was built by people that care a lot about real and deep customization.
 
-Not only in the software but also in hardware. From the replacable bridge cable to the online shop for the keyboard feet: it shows me that you don't have to be afraid of playing around with your setup.
+Not only in the software but also in hardware. From the replaceable bridge cable to the online shop for the keyboard feet: it shows me that you don't have to be afraid of playing around with your setup.
 
 ** Summary
 The UHK is a nice, high quality keyboard that also comes at a high price point.
