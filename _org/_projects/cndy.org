@@ -1,10 +1,11 @@
 #+BEGIN_EXPORT html
 ---
 name: CNDY
+order: 4
 ---
 #+END_EXPORT
 
-A hyperlocal crypto asset ecosystem to buy candy! The project was awarded with a honorable mention at Stellar Build Challenge #6.
+A hyperlocal crypto asset ecosystem to buy candy! The project was awarded with an honorable mention at Stellar Build Challenge #6.
 
 It was based on the Stellar blockchain and ecosystem and came with a server, a dashboard and clients for Android and iOS.
 

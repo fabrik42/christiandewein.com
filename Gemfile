@@ -1,8 +1,6 @@
 source "https://rubygems.org"
 
-gem 'jekyll', '~> 4.3.1'
-
-gem 'bootstrap', '~> 5.2.2'
+gem 'jekyll', '~> 4.4'
 
 gem 'kramdown-parser-gfm'
 

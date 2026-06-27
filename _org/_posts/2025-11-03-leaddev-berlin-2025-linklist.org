@@ -1,0 +1,29 @@
+#+BEGIN_EXPORT html
+---
+title: LeadDev Berlin 2025 Linklist
+description: Personal link collection of things that I (re-)discovered during LeadDev Berlin 2025.
+layout: post
+permalink: /leaddev-berlin-2025-linklist
+tags: linklist
+---
+#+END_EXPORT
+
+* {{ page.title }}
+Personal link collection of things that I (re-)discovered during the [[https://leaddev.com/leaddev-berlin/][LeadDev Berlin 2025]].
+
+** Management
+- [[https://monkeysthumb.co.uk/workshops/navigating-difference-and-disagreement/leaddev-berlin-25/][Navigating difference and disagreement]]
+- [[https://www.oreilly.com/library/view/the-engineering-executives/9781098149475/][The Engineering Executive's Primer [Book]]]
+- [[https://www.confidentcommunicator.com/blog/the-conflict-continuum][The conflict continuum — Confident Communicators, LLC]]
+- [[https://www.leejustin.com/Rethinking-Interviewing-In-An-AI-Era-2a0703f0ba8f80029025f2775f082e1a][Rethinking Interviewing In An AI Era]]
+- [[https://donellameadows.org/systems-thinking-book-sale/][Thinking in Systems Book Sale - The Donella Meadows Project]]
+** Technology
+- [[https://www.checklyhq.com/][Checkly: Application Monitoring Powered by Playwright & OTEL]]
+- [[https://www.swarmia.com/][Swarmia: Rethink developer productivity]]
+- [[https://uptimelabs.io/][Uptime Labs]]
+** Online Resources
+- [[https://www.kaggle.com/whitepaper-prompt-engineering][Prompt Engineering Ebook]]
+- [[https://dora.dev/research/2025/dora-report/][DORA | State of AI-assisted Software Development 2025]]
+** Tools
+- [[https://github.com/jstanier/bragdoc][jstanier/bragdoc: Generate a doc from your activity in Linear.]]
+- [[https://gamma.app/de][Gamma | Bester KI-Präsentations- und Website-Builder]]

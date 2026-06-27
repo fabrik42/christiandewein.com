@@ -39,7 +39,7 @@ The publishing involves both systems: Emacs converts =.org= content to HTML and 
 
 I have configured Org-Mode's publishing system to handle all the specifics of content generation. The configuration specifies that all my =.org= files are stored in a specific directory (=./_org=), and whenever I make updates or save a file, Org-Mode exports them into HTML format.
 
-The generated HTML pages, as well as additional HTML pages and static assets such as images, CSS, and (in theory) JavaScript files are handled by the Jekyll build system to generate the the full website.
+The generated HTML pages, as well as additional HTML pages and static assets such as images, CSS, and (in theory) JavaScript files are handled by the Jekyll build system to generate the full website.
 ** Emacs Integration
 To further streamline my workflow, I make use of the [[https://github.com/magit/transient][Transient]] library in Emacs, which provides a convenient interface for executing various tasks related to the website.
 
@@ -53,5 +53,5 @@ Emacs, Org-Mode and Jekyll play very well together. They are all technologies th
 
 They combine my favorite way to create content with my favorite way to deliver content. To have the best of both worlds is a very nice experience.
 
-This is a very indivdual setup that always had the goal to bring me joy personally.
+This is a very individual setup that always had the goal to bring me joy personally.
 I do not intend to publish in any packaged way, however the setup is [[https://github.com/fabrik42/christiandewein.com/blob/main/README.org][fully documented]] in the [[https://github.com/fabrik42/christiandewein.com][public repo of this website]].

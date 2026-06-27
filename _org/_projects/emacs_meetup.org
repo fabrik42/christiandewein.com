@@ -1,6 +1,6 @@
 #+BEGIN_EXPORT html
 ---
-name: Emacs FFM Meetup
+name: Emacs FFM Meetup (archived)
 order: 5
 ---
 #+END_EXPORT

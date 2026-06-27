@@ -10,10 +10,9 @@ description: Podcasts where I was a guest at, talking about different topics.
 <ul class="list">
   {% for podcast in site.data.podcasts %}
   <li>
-    <a href="{{podcast.slides_url}}">{{podcast.title}}</a>
-    <br />
-    <span class="text-muted">
-      via <a href="{{podcast.occassion_url}}">{{podcast.occassion}}</a>, {{podcast.year}}
+    <a class="list-title" href="{{ podcast.slides_url }}">{{ podcast.title }}</a>
+    <span class="list-meta">
+      via <a href="{{ podcast.occassion_url }}">{{ podcast.occassion }}</a>, {{ podcast.year }}
     </span>
   </li>
   {% endfor %}

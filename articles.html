@@ -4,16 +4,28 @@ title: Articles
 permalink: articles
 description: Articles written by me, published on different sources
 ---
+
 <h1>Articles</h1>
 
 <ul class="list">
   {% for article in site.data.articles %}
   <li>
-    <a href="{{article.url}}">{{article.title}}</a>
-    <br />
-    <span class="text-muted">
-      via <a href="{{article.via_url}}">{{article.via}}</a>, {{article.year}}
+    <a class="list-title" href="{{ article.url }}">{{ article.title }}</a>
+    <span class="list-meta">
+      via <a href="{{ article.via_url }}">{{ article.via }}</a>, {{ article.year }}
     </span>
+  </li>
+  {% endfor %}
+</ul>
+
+<h2>Linklists</h2>
+
+<p>Linklists curated by me on different conferences.</p>
+
+<ul class="list">
+  {% for article in site.tags.linklist %}
+  <li>
+    <a class="list-title" href="{{ article.url }}">{{ article.title }}</a>
   </li>
   {% endfor %}
 </ul>
